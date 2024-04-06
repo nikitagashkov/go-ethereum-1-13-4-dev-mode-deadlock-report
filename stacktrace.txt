@@ -1,0 +1,735 @@
+goroutine 4556 [running]:
+runtime/pprof.writeGoroutineStacks({0x106f578a0, 0xc0005ea270})
+        /Users/gashkov/.asdf/installs/golang/1.21.0/go/src/runtime/pprof/pprof.go:703 +0xb0
+runtime/pprof.writeGoroutine({0x106f578a0, 0xc0005ea270}, 0x2)
+        /Users/gashkov/.asdf/installs/golang/1.21.0/go/src/runtime/pprof/pprof.go:692 +0x5c
+runtime/pprof.(*Profile).WriteTo(0x107ab4320, {0x106f578a0, 0xc0005ea270}, 0x2)
+        /Users/gashkov/.asdf/installs/golang/1.21.0/go/src/runtime/pprof/pprof.go:329 +0xd4
+github.com/ethereum/go-ethereum/internal/debug.(*HandlerT).Stacks(0xc000723b58, 0x0)
+        /Users/gashkov/dev/go-ethereum/internal/debug/api.go:194 +0x94
+reflect.Value.call({0xc00029cfa0, 0xc000a89068, 0x13}, {0x10640291a, 0x4}, {0xc000c84550, 0x2, 0x3})
+        /Users/gashkov/.asdf/installs/golang/1.21.0/go/src/reflect/value.go:596 +0xcb0
+reflect.Value.Call({0xc00029cfa0, 0xc000a89068, 0x13}, {0xc000c84550, 0x2, 0x3})
+        /Users/gashkov/.asdf/installs/golang/1.21.0/go/src/reflect/value.go:380 +0xc4
+github.com/ethereum/go-ethereum/rpc.(*callback).call(0xc000b88840, {0x106f66790, 0xc000c84500}, {0xc000e140b4, 0xc}, {0xc0009ae168, 0x1, 0x1})
+        /Users/gashkov/dev/go-ethereum/rpc/service.go:205 +0x6f8
+github.com/ethereum/go-ethereum/rpc.(*handler).runMethod(0xc000ac6140, {0x106f66790, 0xc000c84500}, 0xc0004343f0, 0xc000b88840, {0xc0009ae168, 0x1, 0x1})
+        /Users/gashkov/dev/go-ethereum/rpc/handler.go:565 +0xc8
+github.com/ethereum/go-ethereum/rpc.(*handler).handleCall(0xc000ac6140, 0xc0005ea180, 0xc0004343f0)
+        /Users/gashkov/dev/go-ethereum/rpc/handler.go:512 +0x384
+github.com/ethereum/go-ethereum/rpc.(*handler).handleCallMsg(0xc000ac6140, 0xc0005ea180, 0xc0004343f0)
+        /Users/gashkov/dev/go-ethereum/rpc/handler.go:470 +0x2b8
+github.com/ethereum/go-ethereum/rpc.(*handler).handleNonBatchCall(0xc000ac6140, 0xc0005ea180, 0xc0004343f0)
+        /Users/gashkov/dev/go-ethereum/rpc/handler.go:296 +0x3c8
+github.com/ethereum/go-ethereum/rpc.(*handler).handleMsg.func1.1(0xc0005ea180)
+        /Users/gashkov/dev/go-ethereum/rpc/handler.go:269 +0x5c
+github.com/ethereum/go-ethereum/rpc.(*handler).startCallProc.func1()
+        /Users/gashkov/dev/go-ethereum/rpc/handler.go:387 +0x238
+created by github.com/ethereum/go-ethereum/rpc.(*handler).startCallProc in goroutine 4625
+        /Users/gashkov/dev/go-ethereum/rpc/handler.go:383 +0x128
+
+goroutine 1 [chan receive, 1 minutes]:
+github.com/ethereum/go-ethereum/node.(*Node).Wait(0xc0004600e0)
+        /Users/gashkov/dev/go-ethereum/node/node.go:557 +0x58
+main.geth(0xc000690200)
+        /Users/gashkov/dev/go-ethereum/cmd/geth/main.go:344 +0x2e8
+github.com/urfave/cli/v2.(*Command).Run(0xc0002bfb80, 0xc000690200, {0xc0001d8000, 0x7, 0x7})
+        /Users/gashkov/.asdf/installs/golang/1.21.0/packages/pkg/mod/github.com/urfave/cli/v2@v2.25.7/command.go:274 +0x1314
+github.com/urfave/cli/v2.(*App).RunContext(0xc00013a5a0, {0x106f66838, 0x108c0da00}, {0xc0001d8000, 0x7, 0x7})
+        /Users/gashkov/.asdf/installs/golang/1.21.0/packages/pkg/mod/github.com/urfave/cli/v2@v2.25.7/app.go:332 +0x300
+github.com/urfave/cli/v2.(*App).Run(0xc00013a5a0, {0xc0001d8000, 0x7, 0x7})
+        /Users/gashkov/.asdf/installs/golang/1.21.0/packages/pkg/mod/github.com/urfave/cli/v2@v2.25.7/app.go:309 +0x88
+main.main()
+        /Users/gashkov/dev/go-ethereum/cmd/geth/main.go:270 +0x7c
+
+goroutine 34 [syscall, 1 minutes]:
+os/signal.signal_recv()
+        /Users/gashkov/.asdf/installs/golang/1.21.0/go/src/runtime/sigqueue.go:149 +0x2c
+os/signal.loop()
+        /Users/gashkov/.asdf/installs/golang/1.21.0/go/src/os/signal/signal_unix.go:23 +0x30
+created by os/signal.Notify.func1.1 in goroutine 1
+        /Users/gashkov/.asdf/installs/golang/1.21.0/go/src/os/signal/signal.go:151 +0x58
+
+goroutine 23 [chan receive, 1 minutes]:
+github.com/ethereum/go-ethereum/core.(*txSenderCacher).cache(0xc0003947f0)
+        /Users/gashkov/dev/go-ethereum/core/sender_cacher.go:63 +0x6c
+created by github.com/ethereum/go-ethereum/core.newTxSenderCacher in goroutine 1
+        /Users/gashkov/dev/go-ethereum/core/sender_cacher.go:55 +0x188
+
+goroutine 24 [chan receive, 1 minutes]:
+github.com/ethereum/go-ethereum/core.(*txSenderCacher).cache(0xc0003947f0)
+        /Users/gashkov/dev/go-ethereum/core/sender_cacher.go:63 +0x6c
+created by github.com/ethereum/go-ethereum/core.newTxSenderCacher in goroutine 1
+        /Users/gashkov/dev/go-ethereum/core/sender_cacher.go:55 +0x188
+
+goroutine 25 [chan receive, 1 minutes]:
+github.com/ethereum/go-ethereum/core.(*txSenderCacher).cache(0xc0003947f0)
+        /Users/gashkov/dev/go-ethereum/core/sender_cacher.go:63 +0x6c
+created by github.com/ethereum/go-ethereum/core.newTxSenderCacher in goroutine 1
+        /Users/gashkov/dev/go-ethereum/core/sender_cacher.go:55 +0x188
+
+goroutine 26 [chan receive, 1 minutes]:
+github.com/ethereum/go-ethereum/core.(*txSenderCacher).cache(0xc0003947f0)
+        /Users/gashkov/dev/go-ethereum/core/sender_cacher.go:63 +0x6c
+created by github.com/ethereum/go-ethereum/core.newTxSenderCacher in goroutine 1
+        /Users/gashkov/dev/go-ethereum/core/sender_cacher.go:55 +0x188
+
+goroutine 27 [chan receive, 1 minutes]:
+github.com/ethereum/go-ethereum/core.(*txSenderCacher).cache(0xc0003947f0)
+        /Users/gashkov/dev/go-ethereum/core/sender_cacher.go:63 +0x6c
+created by github.com/ethereum/go-ethereum/core.newTxSenderCacher in goroutine 1
+        /Users/gashkov/dev/go-ethereum/core/sender_cacher.go:55 +0x188
+
+goroutine 28 [chan receive, 1 minutes]:
+github.com/ethereum/go-ethereum/core.(*txSenderCacher).cache(0xc0003947f0)
+        /Users/gashkov/dev/go-ethereum/core/sender_cacher.go:63 +0x6c
+created by github.com/ethereum/go-ethereum/core.newTxSenderCacher in goroutine 1
+        /Users/gashkov/dev/go-ethereum/core/sender_cacher.go:55 +0x188
+
+goroutine 29 [chan receive, 1 minutes]:
+github.com/ethereum/go-ethereum/core.(*txSenderCacher).cache(0xc0003947f0)
+        /Users/gashkov/dev/go-ethereum/core/sender_cacher.go:63 +0x6c
+created by github.com/ethereum/go-ethereum/core.newTxSenderCacher in goroutine 1
+        /Users/gashkov/dev/go-ethereum/core/sender_cacher.go:55 +0x188
+
+goroutine 30 [chan receive, 1 minutes]:
+github.com/ethereum/go-ethereum/core.(*txSenderCacher).cache(0xc0003947f0)
+        /Users/gashkov/dev/go-ethereum/core/sender_cacher.go:63 +0x6c
+created by github.com/ethereum/go-ethereum/core.newTxSenderCacher in goroutine 1
+        /Users/gashkov/dev/go-ethereum/core/sender_cacher.go:55 +0x188
+
+goroutine 31 [chan receive, 1 minutes]:
+github.com/ethereum/go-ethereum/core.(*txSenderCacher).cache(0xc0003947f0)
+        /Users/gashkov/dev/go-ethereum/core/sender_cacher.go:63 +0x6c
+created by github.com/ethereum/go-ethereum/core.newTxSenderCacher in goroutine 1
+        /Users/gashkov/dev/go-ethereum/core/sender_cacher.go:55 +0x188
+
+goroutine 32 [chan receive, 1 minutes]:
+github.com/ethereum/go-ethereum/core.(*txSenderCacher).cache(0xc0003947f0)
+        /Users/gashkov/dev/go-ethereum/core/sender_cacher.go:63 +0x6c
+created by github.com/ethereum/go-ethereum/core.newTxSenderCacher in goroutine 1
+        /Users/gashkov/dev/go-ethereum/core/sender_cacher.go:55 +0x188
+
+goroutine 33 [chan receive, 1 minutes]:
+github.com/ethereum/go-ethereum/core.(*txSenderCacher).cache(0xc0003947f0)
+        /Users/gashkov/dev/go-ethereum/core/sender_cacher.go:63 +0x6c
+created by github.com/ethereum/go-ethereum/core.newTxSenderCacher in goroutine 1
+        /Users/gashkov/dev/go-ethereum/core/sender_cacher.go:55 +0x188
+
+goroutine 66 [chan receive, 1 minutes]:
+github.com/ethereum/go-ethereum/core.(*txSenderCacher).cache(0xc0003947f0)
+        /Users/gashkov/dev/go-ethereum/core/sender_cacher.go:63 +0x6c
+created by github.com/ethereum/go-ethereum/core.newTxSenderCacher in goroutine 1
+        /Users/gashkov/dev/go-ethereum/core/sender_cacher.go:55 +0x188
+
+goroutine 40 [syscall, 1 minutes]:
+syscall.syscall6(0x1063c4ed4?, 0x109205100?, 0xc000021528?, 0x104403714?, 0x0?, 0xc000048190?, 0xc000021538?)
+        /Users/gashkov/.asdf/installs/golang/1.21.0/go/src/runtime/sys_darwin.go:45 +0x68
+golang.org/x/sys/unix.kevent(0x9, 0x0, 0x0, 0xc000021e58, 0xa, 0x0)
+        /Users/gashkov/.asdf/installs/golang/1.21.0/packages/pkg/mod/golang.org/x/sys@v0.16.0/unix/zsyscall_darwin_arm64.go:275 +0xc4
+golang.org/x/sys/unix.Kevent(0x9, {0x0, 0x0, 0x0}, {0xc000021e58, 0xa, 0xa}, 0x0)
+        /Users/gashkov/.asdf/installs/golang/1.21.0/packages/pkg/mod/golang.org/x/sys@v0.16.0/unix/syscall_bsd.go:397 +0x114
+github.com/fsnotify/fsnotify.(*Watcher).read(0xc000434070, {0xc000021e58, 0xa, 0xa})
+        /Users/gashkov/.asdf/installs/golang/1.21.0/packages/pkg/mod/github.com/fsnotify/fsnotify@v1.6.0/backend_kqueue.go:702 +0xb4
+github.com/fsnotify/fsnotify.(*Watcher).readEvents(0xc000434070)
+        /Users/gashkov/.asdf/installs/golang/1.21.0/packages/pkg/mod/github.com/fsnotify/fsnotify@v1.6.0/backend_kqueue.go:487 +0x174
+created by github.com/fsnotify/fsnotify.NewWatcher in goroutine 9
+        /Users/gashkov/.asdf/installs/golang/1.21.0/packages/pkg/mod/github.com/fsnotify/fsnotify@v1.6.0/backend_kqueue.go:155 +0x5a4
+
+goroutine 8 [select, 1 minutes]:
+github.com/ethereum/go-ethereum/accounts.(*Manager).update(0xc000460460)
+        /Users/gashkov/dev/go-ethereum/accounts/manager.go:137 +0x218
+created by github.com/ethereum/go-ethereum/accounts.NewManager in goroutine 1
+        /Users/gashkov/dev/go-ethereum/accounts/manager.go:94 +0xa8c
+
+goroutine 9 [select, 1 minutes]:
+github.com/ethereum/go-ethereum/accounts/keystore.(*watcher).loop(0xc00000e408)
+        /Users/gashkov/dev/go-ethereum/accounts/keystore/watch.go:108 +0xbb4
+created by github.com/ethereum/go-ethereum/accounts/keystore.(*watcher).start in goroutine 1
+        /Users/gashkov/dev/go-ethereum/accounts/keystore/watch.go:56 +0x144
+
+goroutine 10 [select]:
+github.com/ethereum/go-ethereum/accounts/keystore.(*KeyStore).updater(0xc0000ce690)
+        /Users/gashkov/dev/go-ethereum/accounts/keystore/keystore.go:209 +0xe4
+created by github.com/ethereum/go-ethereum/accounts/keystore.(*KeyStore).Subscribe in goroutine 8
+        /Users/gashkov/dev/go-ethereum/accounts/keystore/keystore.go:196 +0x238
+
+goroutine 46 [select, 1 minutes]:
+github.com/ethereum/go-ethereum/core/txpool/legacypool.(*LegacyPool).scheduleReorgLoop(0xc0003b9c00)
+        /Users/gashkov/dev/go-ethereum/core/txpool/legacypool/legacypool.go:1215 +0x53c
+created by github.com/ethereum/go-ethereum/core/txpool/legacypool.(*LegacyPool).Init in goroutine 1
+        /Users/gashkov/dev/go-ethereum/core/txpool/legacypool/legacypool.go:315 +0x430
+
+goroutine 2032 [select, 1 minutes]:
+github.com/ethereum/go-ethereum/core/txpool.(*TxPool).loop(0xc000513e60, 0xc000420780, {0x106f5ec18, 0xc00003e800})
+        /Users/gashkov/dev/go-ethereum/core/txpool/txpool.go:243 +0x70c
+created by github.com/ethereum/go-ethereum/core/txpool.New in goroutine 1
+        /Users/gashkov/dev/go-ethereum/core/txpool/txpool.go:103 +0x598
+
+goroutine 4354 [select, 1 minutes]:
+github.com/ethereum/go-ethereum/eth/fetcher.(*BlockFetcher).loop(0xc0002ca2a0)
+        /Users/gashkov/dev/go-ethereum/eth/fetcher/block_fetcher.go:380 +0xb60
+created by github.com/ethereum/go-ethereum/eth/fetcher.(*BlockFetcher).Start in goroutine 4336
+        /Users/gashkov/dev/go-ethereum/eth/fetcher/block_fetcher.go:232 +0xb8
+
+goroutine 4283 [select, 1 minutes]:
+github.com/syndtr/goleveldb/leveldb.(*DB).tCompaction(0xc0001388c0)
+        /Users/gashkov/.asdf/installs/golang/1.21.0/packages/pkg/mod/github.com/syndtr/goleveldb@v1.0.1-0.20210819022825-2ae1ddf74ef7/leveldb/db_compaction.go:836 +0x5f0
+created by github.com/syndtr/goleveldb/leveldb.openDB in goroutine 1
+        /Users/gashkov/.asdf/installs/golang/1.21.0/packages/pkg/mod/github.com/syndtr/goleveldb@v1.0.1-0.20210819022825-2ae1ddf74ef7/leveldb/db.go:155 +0xbac
+
+goroutine 4276 [select, 1 minutes]:
+github.com/ethereum/go-ethereum/event.JoinSubscriptions.func1(0xc0004ea780)
+        /Users/gashkov/dev/go-ethereum/event/multisub.go:43 +0x444
+github.com/ethereum/go-ethereum/event.NewSubscription.func1()
+        /Users/gashkov/dev/go-ethereum/event/subscription.go:53 +0x120
+created by github.com/ethereum/go-ethereum/event.NewSubscription in goroutine 1
+        /Users/gashkov/dev/go-ethereum/event/subscription.go:51 +0x258
+
+goroutine 4277 [select, 1 minutes]:
+github.com/ethereum/go-ethereum/eth/filters.(*EventSystem).eventLoop(0xc0000cbd90)
+        /Users/gashkov/dev/go-ethereum/eth/filters/filter_system.go:563 +0x5a4
+created by github.com/ethereum/go-ethereum/eth/filters.NewEventSystem in goroutine 1
+        /Users/gashkov/dev/go-ethereum/eth/filters/filter_system.go:249 +0xa70
+
+goroutine 4284 [select, 1 minutes]:
+github.com/syndtr/goleveldb/leveldb.(*DB).mCompaction(0xc0001388c0)
+        /Users/gashkov/.asdf/installs/golang/1.21.0/packages/pkg/mod/github.com/syndtr/goleveldb@v1.0.1-0.20210819022825-2ae1ddf74ef7/leveldb/db_compaction.go:773 +0x200
+created by github.com/syndtr/goleveldb/leveldb.openDB in goroutine 1
+        /Users/gashkov/.asdf/installs/golang/1.21.0/packages/pkg/mod/github.com/syndtr/goleveldb@v1.0.1-0.20210819022825-2ae1ddf74ef7/leveldb/db.go:156 +0xc3c
+
+goroutine 4275 [select]:
+github.com/ethereum/go-ethereum/eth/downloader.(*DownloaderAPI).eventLoop(0xc0005ea4e0)
+        /Users/gashkov/dev/go-ethereum/eth/downloader/api.go:90 +0x41c
+created by github.com/ethereum/go-ethereum/eth/downloader.NewDownloaderAPI in goroutine 1
+        /Users/gashkov/dev/go-ethereum/eth/downloader/api.go:53 +0x2c0
+
+goroutine 4286 [chan receive, 1 minutes]:
+github.com/ethereum/go-ethereum/p2p/enode.(*FairMix).nextFromAny(0xc0008bba40)
+        /Users/gashkov/dev/go-ethereum/p2p/enode/iter.go:248 +0x60
+github.com/ethereum/go-ethereum/p2p/enode.(*FairMix).Next(0xc0008bba40)
+        /Users/gashkov/dev/go-ethereum/p2p/enode/iter.go:209 +0x428
+github.com/ethereum/go-ethereum/p2p.(*dialScheduler).readNodes(0xc0003682c0, {0x106f628b0, 0xc0008bba40})
+        /Users/gashkov/dev/go-ethereum/p2p/dial.go:321 +0x10c
+created by github.com/ethereum/go-ethereum/p2p.newDialScheduler in goroutine 1
+        /Users/gashkov/dev/go-ethereum/p2p/dial.go:180 +0x898
+
+goroutine 4288 [select, 1 minutes]:
+github.com/ethereum/go-ethereum/p2p.(*Server).run(0xc0001ecb00)
+        /Users/gashkov/dev/go-ethereum/p2p/server.go:723 +0x8dc
+created by github.com/ethereum/go-ethereum/p2p.(*Server).Start in goroutine 1
+        /Users/gashkov/dev/go-ethereum/p2p/server.go:502 +0xa64
+
+goroutine 4278 [chan receive, 1 minutes]:
+github.com/ethereum/go-ethereum/eth/filters.(*FilterAPI).timeoutLoop(0xc0005ea870, 0x45d964b800)
+        /Users/gashkov/dev/go-ethereum/eth/filters/api.go:89 +0x13c
+created by github.com/ethereum/go-ethereum/eth/filters.NewFilterAPI in goroutine 1
+        /Users/gashkov/dev/go-ethereum/eth/filters/api.go:77 +0x2fc
+
+goroutine 4285 [select, 1 minutes]:
+github.com/ethereum/go-ethereum/p2p.(*Server).portMappingLoop(0xc0001ecb00)
+        /Users/gashkov/dev/go-ethereum/p2p/server_nat.go:118 +0x700
+created by github.com/ethereum/go-ethereum/p2p.(*Server).setupPortMapping in goroutine 1
+        /Users/gashkov/dev/go-ethereum/p2p/server_nat.go:70 +0x348
+
+goroutine 4282 [select]:
+github.com/syndtr/goleveldb/leveldb.(*DB).mpoolDrain(0xc0001388c0)
+        /Users/gashkov/.asdf/installs/golang/1.21.0/packages/pkg/mod/github.com/syndtr/goleveldb@v1.0.1-0.20210819022825-2ae1ddf74ef7/leveldb/db_state.go:101 +0x108
+created by github.com/syndtr/goleveldb/leveldb.openDB in goroutine 1
+        /Users/gashkov/.asdf/installs/golang/1.21.0/packages/pkg/mod/github.com/syndtr/goleveldb@v1.0.1-0.20210819022825-2ae1ddf74ef7/leveldb/db.go:149 +0xae4
+
+goroutine 41 [select, 1 minutes]:
+github.com/ethereum/go-ethereum/core.(*ChainIndexer).updateLoop(0xc0000ce870)
+        /Users/gashkov/dev/go-ethereum/core/chain_indexer.go:312 +0x114
+created by github.com/ethereum/go-ethereum/core.NewChainIndexer in goroutine 1
+        /Users/gashkov/dev/go-ethereum/core/chain_indexer.go:120 +0x65c
+
+goroutine 4287 [select, 1 minutes]:
+github.com/ethereum/go-ethereum/p2p.(*dialScheduler).loop(0xc0003682c0, {0x106f628b0, 0xc0008bba40})
+        /Users/gashkov/dev/go-ethereum/p2p/dial.go:242 +0x31c
+created by github.com/ethereum/go-ethereum/p2p.newDialScheduler in goroutine 1
+        /Users/gashkov/dev/go-ethereum/p2p/dial.go:181 +0x99c
+
+goroutine 4280 [select, 1 minutes]:
+github.com/syndtr/goleveldb/leveldb.(*session).refLoop(0xc0000cec30)
+        /Users/gashkov/.asdf/installs/golang/1.21.0/packages/pkg/mod/github.com/syndtr/goleveldb@v1.0.1-0.20210819022825-2ae1ddf74ef7/leveldb/session_util.go:189 +0xce0
+created by github.com/syndtr/goleveldb/leveldb.newSession in goroutine 1
+        /Users/gashkov/.asdf/installs/golang/1.21.0/packages/pkg/mod/github.com/syndtr/goleveldb@v1.0.1-0.20210819022825-2ae1ddf74ef7/leveldb/session.go:93 +0x5fc
+
+goroutine 4279 [chan receive, 1 minutes]:
+github.com/ethereum/go-ethereum/core/txpool.(*TxPool).Sync(0xc000513e60)
+        /Users/gashkov/dev/go-ethereum/core/txpool/txpool.go:478 +0x148
+github.com/ethereum/go-ethereum/eth/catalyst.(*ConsensusAPI).forkchoiceUpdated(0xc000178be0, {{0xc9, 0x10, 0x26, 0x77, 0xa1, 0x3, 0x24, 0x7, 0xab, ...}, ...}, ...)
+        /Users/gashkov/dev/go-ethereum/eth/catalyst/api.go:397 +0x28d0
+github.com/ethereum/go-ethereum/eth/catalyst.(*SimulatedBeacon).sealBlock(0xc0006626e0, {0x108c0da00, 0x0, 0x0}, 0x661190bc)
+        /Users/gashkov/dev/go-ethereum/eth/catalyst/simulated_beacon.go:159 +0x4f4
+github.com/ethereum/go-ethereum/eth/catalyst.(*SimulatedBeacon).Commit(0xc0006626e0)
+        /Users/gashkov/dev/go-ethereum/eth/catalyst/simulated_beacon.go:249 +0xc4
+github.com/ethereum/go-ethereum/eth/catalyst.(*api).loop(0xc0001b6980)
+        /Users/gashkov/dev/go-ethereum/eth/catalyst/simulated_beacon_api.go:50 +0x2d8
+created by github.com/ethereum/go-ethereum/eth/catalyst.RegisterSimulatedBeaconAPIs in goroutine 1
+        /Users/gashkov/dev/go-ethereum/eth/catalyst/simulated_beacon.go:294 +0x14c
+
+goroutine 4281 [select, 1 minutes]:
+github.com/syndtr/goleveldb/leveldb.(*DB).compactionError(0xc0001388c0)
+        /Users/gashkov/.asdf/installs/golang/1.21.0/packages/pkg/mod/github.com/syndtr/goleveldb@v1.0.1-0.20210819022825-2ae1ddf74ef7/leveldb/db_compaction.go:91 +0x114
+created by github.com/syndtr/goleveldb/leveldb.openDB in goroutine 1
+        /Users/gashkov/.asdf/installs/golang/1.21.0/packages/pkg/mod/github.com/syndtr/goleveldb@v1.0.1-0.20210819022825-2ae1ddf74ef7/leveldb/db.go:148 +0xa54
+
+goroutine 4268 [select, 1 minutes]:
+github.com/ethereum/go-ethereum/eth.(*Ethereum).startBloomHandlers.func1()
+        /Users/gashkov/dev/go-ethereum/eth/bloombits.go:50 +0x114
+created by github.com/ethereum/go-ethereum/eth.(*Ethereum).startBloomHandlers in goroutine 1
+        /Users/gashkov/dev/go-ethereum/eth/bloombits.go:48 +0xf4
+
+goroutine 45 [select, 1 minutes]:
+github.com/ethereum/go-ethereum/core.(*ChainIndexer).eventLoop(0xc0000ce870, 0xc000283900, 0xc000513d40, {0x106f5f690, 0xc000eafc50})
+        /Users/gashkov/dev/go-ethereum/core/chain_indexer.go:212 +0x27c
+created by github.com/ethereum/go-ethereum/core.(*ChainIndexer).Start in goroutine 1
+        /Users/gashkov/dev/go-ethereum/core/chain_indexer.go:153 +0x260
+
+goroutine 42 [chan receive, 1 minutes]:
+github.com/ethereum/go-ethereum/core/state/snapshot.(*diskLayer).generate(0xc000490870, 0xc0000303c0)
+        /Users/gashkov/dev/go-ethereum/core/state/snapshot/generate.go:722 +0xc3c
+created by github.com/ethereum/go-ethereum/core/state/snapshot.generateSnapshot in goroutine 1
+        /Users/gashkov/dev/go-ethereum/core/state/snapshot/generate.go:80 +0x7e0
+
+goroutine 44 [select]:
+github.com/ethereum/go-ethereum/core.(*txIndexer).loop(0xc00051b980, 0xc00003e800)
+        /Users/gashkov/dev/go-ethereum/core/txindexer.go:149 +0x710
+created by github.com/ethereum/go-ethereum/core.newTxIndexer in goroutine 1
+        /Users/gashkov/dev/go-ethereum/core/txindexer.go:63 +0x330
+
+goroutine 4272 [select, 1 minutes]:
+github.com/ethereum/go-ethereum/eth.(*Ethereum).startBloomHandlers.func1()
+        /Users/gashkov/dev/go-ethereum/eth/bloombits.go:50 +0x114
+created by github.com/ethereum/go-ethereum/eth.(*Ethereum).startBloomHandlers in goroutine 1
+        /Users/gashkov/dev/go-ethereum/eth/bloombits.go:48 +0xf4
+
+goroutine 43 [select]:
+github.com/ethereum/go-ethereum/core.(*BlockChain).updateFutureBlocks(0xc00003e800)
+        /Users/gashkov/dev/go-ethereum/core/blockchain.go:2342 +0x278
+created by github.com/ethereum/go-ethereum/core.NewBlockChain in goroutine 1
+        /Users/gashkov/dev/go-ethereum/core/blockchain.go:455 +0x2e44
+
+goroutine 47 [select]:
+github.com/ethereum/go-ethereum/core/txpool/legacypool.(*LegacyPool).loop(0xc0003b9c00)
+        /Users/gashkov/dev/go-ethereum/core/txpool/legacypool/legacypool.go:352 +0x4f0
+created by github.com/ethereum/go-ethereum/core/txpool/legacypool.(*LegacyPool).Init in goroutine 1
+        /Users/gashkov/dev/go-ethereum/core/txpool/legacypool/legacypool.go:327 +0x8e4
+
+goroutine 4274 [chan receive, 1 minutes]:
+github.com/ethereum/go-ethereum/eth/gasprice.NewOracle.func1()
+        /Users/gashkov/dev/go-ethereum/eth/gasprice/gasprice.go:123 +0x6c
+created by github.com/ethereum/go-ethereum/eth/gasprice.NewOracle in goroutine 1
+        /Users/gashkov/dev/go-ethereum/eth/gasprice/gasprice.go:121 +0x1138
+
+goroutine 2033 [select, 1 minutes]:
+github.com/ethereum/go-ethereum/eth/downloader.(*skeleton).startup(0xc0002ca1c0)
+        /Users/gashkov/dev/go-ethereum/eth/downloader/skeleton.go:258 +0x1e4
+created by github.com/ethereum/go-ethereum/eth/downloader.newSkeleton in goroutine 1
+        /Users/gashkov/dev/go-ethereum/eth/downloader/skeleton.go:241 +0x470
+
+goroutine 4355 [select, 1 minutes]:
+github.com/ethereum/go-ethereum/eth/fetcher.(*TxFetcher).loop(0xc0009300b0)
+        /Users/gashkov/dev/go-ethereum/eth/fetcher/tx_fetcher.go:409 +0x24c
+created by github.com/ethereum/go-ethereum/eth/fetcher.(*TxFetcher).Start in goroutine 4336
+        /Users/gashkov/dev/go-ethereum/eth/fetcher/tx_fetcher.go:391 +0xb8
+
+goroutine 48 [select, 1 minutes]:
+github.com/ethereum/go-ethereum/event.JoinSubscriptions.func1.2({0x106f5f6e0, 0xc0001122c0})
+        /Users/gashkov/dev/go-ethereum/event/multisub.go:33 +0xe4
+created by github.com/ethereum/go-ethereum/event.JoinSubscriptions.func1 in goroutine 4259
+        /Users/gashkov/dev/go-ethereum/event/multisub.go:32 +0x398
+
+goroutine 4624 [chan receive]:
+github.com/ethereum/go-ethereum/rpc.(*Server).ServeCodec(0xc000108370, {0x106f69cb0, 0xc000a08460}, 0x0)
+        /Users/gashkov/dev/go-ethereum/rpc/server.go:117 +0x3e8
+created by github.com/ethereum/go-ethereum/rpc.(*Server).ServeListener in goroutine 4265
+        /Users/gashkov/dev/go-ethereum/rpc/ipc.go:38 +0x508
+
+goroutine 4333 [select, 1 minutes]:
+github.com/ethereum/go-ethereum/event.JoinSubscriptions.func1(0xc0005e93e0)
+        /Users/gashkov/dev/go-ethereum/event/multisub.go:43 +0x444
+github.com/ethereum/go-ethereum/event.NewSubscription.func1()
+        /Users/gashkov/dev/go-ethereum/event/subscription.go:53 +0x120
+created by github.com/ethereum/go-ethereum/event.NewSubscription in goroutine 1
+        /Users/gashkov/dev/go-ethereum/event/subscription.go:51 +0x258
+
+goroutine 4269 [select, 1 minutes]:
+github.com/ethereum/go-ethereum/eth.(*Ethereum).startBloomHandlers.func1()
+        /Users/gashkov/dev/go-ethereum/eth/bloombits.go:50 +0x114
+created by github.com/ethereum/go-ethereum/eth.(*Ethereum).startBloomHandlers in goroutine 1
+        /Users/gashkov/dev/go-ethereum/eth/bloombits.go:48 +0xf4
+
+goroutine 4369 [select, 1 minutes]:
+reflect.rselect({0xc00001d148, 0x2, 0x99?})
+        /Users/gashkov/.asdf/installs/golang/1.21.0/go/src/runtime/select.go:589 +0x2d0
+reflect.Select({0xc000000b40, 0x2, 0x5})
+        /Users/gashkov/.asdf/installs/golang/1.21.0/go/src/reflect/value.go:3104 +0xa00
+github.com/ethereum/go-ethereum/event.(*Feed).Send(0xc0003b9c90, {0x106d49200, 0xc000b78078})
+        /Users/gashkov/dev/go-ethereum/event/feed.go:160 +0x758
+github.com/ethereum/go-ethereum/core/txpool/legacypool.(*LegacyPool).runReorg(0xc0003b9c00, 0xc0005e8fc0, 0xc000488ed0, 0xc000458ce0, 0xc00089d290)
+        /Users/gashkov/dev/go-ethereum/core/txpool/legacypool/legacypool.go:1336 +0xbf0
+created by github.com/ethereum/go-ethereum/core/txpool/legacypool.(*LegacyPool).scheduleReorgLoop in goroutine 46
+        /Users/gashkov/dev/go-ethereum/core/txpool/legacypool/legacypool.go:1205 +0x37c
+
+goroutine 67 [select, 1 minutes]:
+github.com/ethereum/go-ethereum/event.JoinSubscriptions.func1(0xc0005e8180)
+        /Users/gashkov/dev/go-ethereum/event/multisub.go:43 +0x444
+github.com/ethereum/go-ethereum/event.NewSubscription.func1()
+        /Users/gashkov/dev/go-ethereum/event/subscription.go:53 +0x120
+created by github.com/ethereum/go-ethereum/event.NewSubscription in goroutine 4279
+        /Users/gashkov/dev/go-ethereum/event/subscription.go:51 +0x258
+
+goroutine 4267 [select, 1 minutes]:
+github.com/ethereum/go-ethereum/eth/protocols/eth.StartENRUpdater.func1()
+        /Users/gashkov/dev/go-ethereum/eth/protocols/eth/discovery.go:48 +0x1c8
+created by github.com/ethereum/go-ethereum/eth/protocols/eth.StartENRUpdater in goroutine 1
+        /Users/gashkov/dev/go-ethereum/eth/protocols/eth/discovery.go:45 +0x218
+
+goroutine 4266 [IO wait, 1 minutes]:
+internal/poll.runtime_pollWait(0xc0008832a8?, 0x72)
+        /Users/gashkov/.asdf/installs/golang/1.21.0/go/src/runtime/netpoll.go:343 +0x44
+internal/poll.(*pollDesc).wait(0xc0009869a0, 0x72, 0x0)
+        /Users/gashkov/.asdf/installs/golang/1.21.0/go/src/internal/poll/fd_poll_runtime.go:84 +0xc0
+internal/poll.(*pollDesc).waitRead(0xc0009869a0, 0x0)
+        /Users/gashkov/.asdf/installs/golang/1.21.0/go/src/internal/poll/fd_poll_runtime.go:89 +0x54
+internal/poll.(*FD).Accept(0xc000986980)
+        /Users/gashkov/.asdf/installs/golang/1.21.0/go/src/internal/poll/fd_unix.go:611 +0x46c
+net.(*netFD).accept(0xc000986980)
+        /Users/gashkov/.asdf/installs/golang/1.21.0/go/src/net/fd_unix.go:172 +0x58
+net.(*TCPListener).accept(0xc000271140)
+        /Users/gashkov/.asdf/installs/golang/1.21.0/go/src/net/tcpsock_posix.go:152 +0x5c
+net.(*TCPListener).Accept(0xc000271140)
+        /Users/gashkov/.asdf/installs/golang/1.21.0/go/src/net/tcpsock.go:315 +0x60
+net/http.(*Server).Serve(0xc000534000, {0x106f626d0, 0xc000271140})
+        /Users/gashkov/.asdf/installs/golang/1.21.0/go/src/net/http/server.go:3056 +0x654
+created by github.com/ethereum/go-ethereum/node.(*httpServer).start in goroutine 1
+        /Users/gashkov/dev/go-ethereum/node/rpcstack.go:160 +0x75c
+
+goroutine 54 [select, 1 minutes]:
+github.com/ethereum/go-ethereum/event.JoinSubscriptions.func1.2({0x106f5f6e0, 0xc000031c00})
+        /Users/gashkov/dev/go-ethereum/event/multisub.go:33 +0xe4
+created by github.com/ethereum/go-ethereum/event.JoinSubscriptions.func1 in goroutine 4333
+        /Users/gashkov/dev/go-ethereum/event/multisub.go:32 +0x398
+
+goroutine 4264 [select, 1 minutes]:
+github.com/ethereum/go-ethereum/miner.(*Miner).update(0xc0005786c0)
+        /Users/gashkov/dev/go-ethereum/miner/miner.go:117 +0x470
+created by github.com/ethereum/go-ethereum/miner.New in goroutine 1
+        /Users/gashkov/dev/go-ethereum/miner/miner.go:95 +0x4a4
+
+goroutine 4270 [select, 1 minutes]:
+github.com/ethereum/go-ethereum/eth.(*Ethereum).startBloomHandlers.func1()
+        /Users/gashkov/dev/go-ethereum/eth/bloombits.go:50 +0x114
+created by github.com/ethereum/go-ethereum/eth.(*Ethereum).startBloomHandlers in goroutine 1
+        /Users/gashkov/dev/go-ethereum/eth/bloombits.go:48 +0xf4
+
+goroutine 4260 [select, 1 minutes]:
+github.com/ethereum/go-ethereum/miner.(*worker).mainLoop(0xc00038f200)
+        /Users/gashkov/dev/go-ethereum/miner/worker.go:533 +0x564
+created by github.com/ethereum/go-ethereum/miner.newWorker in goroutine 1
+        /Users/gashkov/dev/go-ethereum/miner/worker.go:294 +0x128c
+
+goroutine 4271 [select, 1 minutes]:
+github.com/ethereum/go-ethereum/eth.(*Ethereum).startBloomHandlers.func1()
+        /Users/gashkov/dev/go-ethereum/eth/bloombits.go:50 +0x114
+created by github.com/ethereum/go-ethereum/eth.(*Ethereum).startBloomHandlers in goroutine 1
+        /Users/gashkov/dev/go-ethereum/eth/bloombits.go:48 +0xf4
+
+goroutine 4265 [IO wait]:
+internal/poll.runtime_pollWait(0xc000b9b5b8?, 0x72)
+        /Users/gashkov/.asdf/installs/golang/1.21.0/go/src/runtime/netpoll.go:343 +0x44
+internal/poll.(*pollDesc).wait(0xc000986520, 0x72, 0x0)
+        /Users/gashkov/.asdf/installs/golang/1.21.0/go/src/internal/poll/fd_poll_runtime.go:84 +0xc0
+internal/poll.(*pollDesc).waitRead(0xc000986520, 0x0)
+        /Users/gashkov/.asdf/installs/golang/1.21.0/go/src/internal/poll/fd_poll_runtime.go:89 +0x54
+internal/poll.(*FD).Accept(0xc000986500)
+        /Users/gashkov/.asdf/installs/golang/1.21.0/go/src/internal/poll/fd_unix.go:611 +0x46c
+net.(*netFD).accept(0xc000986500)
+        /Users/gashkov/.asdf/installs/golang/1.21.0/go/src/net/fd_unix.go:172 +0x58
+net.(*UnixListener).accept(0xc0005eaa80)
+        /Users/gashkov/.asdf/installs/golang/1.21.0/go/src/net/unixsock_posix.go:172 +0x5c
+net.(*UnixListener).Accept(0xc0005eaa80)
+        /Users/gashkov/.asdf/installs/golang/1.21.0/go/src/net/unixsock.go:260 +0x60
+github.com/ethereum/go-ethereum/rpc.(*Server).ServeListener(0xc000108370, {0x106f62700, 0xc0005eaa80})
+        /Users/gashkov/dev/go-ethereum/rpc/ipc.go:30 +0x60
+created by github.com/ethereum/go-ethereum/rpc.StartIPCEndpoint in goroutine 1
+        /Users/gashkov/dev/go-ethereum/rpc/endpoints.go:50 +0x960
+
+goroutine 4298 [select, 1 minutes]:
+github.com/ethereum/go-ethereum/rpc.(*Client).dispatch(0xc0001681b0, {0x106f69cb0, 0xc0000c1a40})
+        /Users/gashkov/dev/go-ethereum/rpc/client.go:641 +0x508
+created by github.com/ethereum/go-ethereum/rpc.initClient in goroutine 4339
+        /Users/gashkov/dev/go-ethereum/rpc/client.go:269 +0x898
+
+goroutine 49 [select, 1 minutes]:
+github.com/ethereum/go-ethereum/event.JoinSubscriptions.func1.2({0x106f5f6e0, 0xc0001123c0})
+        /Users/gashkov/dev/go-ethereum/event/multisub.go:33 +0xe4
+created by github.com/ethereum/go-ethereum/event.JoinSubscriptions.func1 in goroutine 4259
+        /Users/gashkov/dev/go-ethereum/event/multisub.go:32 +0x398
+
+goroutine 55 [select, 1 minutes]:
+github.com/ethereum/go-ethereum/event.JoinSubscriptions.func1.2({0x106f5f6e0, 0xc000031c40})
+        /Users/gashkov/dev/go-ethereum/event/multisub.go:33 +0xe4
+created by github.com/ethereum/go-ethereum/event.JoinSubscriptions.func1 in goroutine 4333
+        /Users/gashkov/dev/go-ethereum/event/multisub.go:32 +0x398
+
+goroutine 4290 [select, 1 minutes]:
+github.com/ethereum/go-ethereum/event.JoinSubscriptions.func1.2({0x106f5f6e0, 0xc00011a180})
+        /Users/gashkov/dev/go-ethereum/event/multisub.go:33 +0xe4
+created by github.com/ethereum/go-ethereum/event.JoinSubscriptions.func1 in goroutine 4276
+        /Users/gashkov/dev/go-ethereum/event/multisub.go:32 +0x398
+
+goroutine 4323 [select, 1 minutes]:
+github.com/ethereum/go-ethereum/eth.(*Ethereum).startBloomHandlers.func1()
+        /Users/gashkov/dev/go-ethereum/eth/bloombits.go:50 +0x114
+created by github.com/ethereum/go-ethereum/eth.(*Ethereum).startBloomHandlers in goroutine 1
+        /Users/gashkov/dev/go-ethereum/eth/bloombits.go:48 +0xf4
+
+goroutine 4261 [select]:
+github.com/ethereum/go-ethereum/miner.(*worker).newWorkLoop(0xc00038f200, 0x77359400)
+        /Users/gashkov/dev/go-ethereum/miner/worker.go:460 +0x620
+created by github.com/ethereum/go-ethereum/miner.newWorker in goroutine 1
+        /Users/gashkov/dev/go-ethereum/miner/worker.go:295 +0x134c
+
+goroutine 4262 [select, 1 minutes]:
+github.com/ethereum/go-ethereum/miner.(*worker).resultLoop(0xc00038f200)
+        /Users/gashkov/dev/go-ethereum/miner/worker.go:653 +0x1c4
+created by github.com/ethereum/go-ethereum/miner.newWorker in goroutine 1
+        /Users/gashkov/dev/go-ethereum/miner/worker.go:296 +0x13dc
+
+goroutine 4325 [select, 1 minutes]:
+github.com/ethereum/go-ethereum/eth.(*Ethereum).startBloomHandlers.func1()
+        /Users/gashkov/dev/go-ethereum/eth/bloombits.go:50 +0x114
+created by github.com/ethereum/go-ethereum/eth.(*Ethereum).startBloomHandlers in goroutine 1
+        /Users/gashkov/dev/go-ethereum/eth/bloombits.go:48 +0xf4
+
+goroutine 4273 [select, 1 minutes]:
+github.com/ethereum/go-ethereum/eth.(*Ethereum).startBloomHandlers.func1()
+        /Users/gashkov/dev/go-ethereum/eth/bloombits.go:50 +0x114
+created by github.com/ethereum/go-ethereum/eth.(*Ethereum).startBloomHandlers in goroutine 1
+        /Users/gashkov/dev/go-ethereum/eth/bloombits.go:48 +0xf4
+
+goroutine 4625 [select]:
+github.com/ethereum/go-ethereum/rpc.(*Client).dispatch(0xc000490900, {0x106f69cb0, 0xc000a08460})
+        /Users/gashkov/dev/go-ethereum/rpc/client.go:641 +0x508
+created by github.com/ethereum/go-ethereum/rpc.initClient in goroutine 4624
+        /Users/gashkov/dev/go-ethereum/rpc/client.go:269 +0x898
+
+goroutine 4259 [select, 1 minutes]:
+github.com/ethereum/go-ethereum/event.JoinSubscriptions.func1(0xc000049080)
+        /Users/gashkov/dev/go-ethereum/event/multisub.go:43 +0x444
+github.com/ethereum/go-ethereum/event.NewSubscription.func1()
+        /Users/gashkov/dev/go-ethereum/event/subscription.go:53 +0x120
+created by github.com/ethereum/go-ethereum/event.NewSubscription in goroutine 1
+        /Users/gashkov/dev/go-ethereum/event/subscription.go:51 +0x258
+
+goroutine 4674 [IO wait]:
+internal/poll.runtime_pollWait(0xc00056b2c8?, 0x72)
+        /Users/gashkov/.asdf/installs/golang/1.21.0/go/src/runtime/netpoll.go:343 +0x44
+internal/poll.(*pollDesc).wait(0xc00087e220, 0x72, 0x0)
+        /Users/gashkov/.asdf/installs/golang/1.21.0/go/src/internal/poll/fd_poll_runtime.go:84 +0xc0
+internal/poll.(*pollDesc).waitRead(0xc00087e220, 0x0)
+        /Users/gashkov/.asdf/installs/golang/1.21.0/go/src/internal/poll/fd_poll_runtime.go:89 +0x54
+internal/poll.(*FD).Read(0xc00087e200, {0xc000340001, 0x5ff, 0x5ff})
+        /Users/gashkov/.asdf/installs/golang/1.21.0/go/src/internal/poll/fd_unix.go:164 +0x420
+net.(*netFD).Read(0xc00087e200, {0xc000340001, 0x5ff, 0x5ff})
+        /Users/gashkov/.asdf/installs/golang/1.21.0/go/src/net/fd_posix.go:55 +0x70
+net.(*conn).Read(0xc000800040, {0xc000340001, 0x5ff, 0x5ff})
+        /Users/gashkov/.asdf/installs/golang/1.21.0/go/src/net/net.go:179 +0x9c
+encoding/json.(*Decoder).refill(0xc000c26280)
+        /Users/gashkov/.asdf/installs/golang/1.21.0/go/src/encoding/json/stream.go:165 +0x4e4
+encoding/json.(*Decoder).readValue(0xc000c26280)
+        /Users/gashkov/.asdf/installs/golang/1.21.0/go/src/encoding/json/stream.go:140 +0x5fc
+encoding/json.(*Decoder).Decode(0xc000c26280, {0x106d08860, 0xc0009ae120})
+        /Users/gashkov/.asdf/installs/golang/1.21.0/go/src/encoding/json/stream.go:63 +0x10c
+github.com/ethereum/go-ethereum/rpc.(*jsonCodec).readBatch(0xc000a08460)
+        /Users/gashkov/dev/go-ethereum/rpc/json.go:236 +0xd4
+github.com/ethereum/go-ethereum/rpc.(*Client).read(0xc000490900, {0x106f69cb0, 0xc000a08460})
+        /Users/gashkov/dev/go-ethereum/rpc/client.go:714 +0x60
+created by github.com/ethereum/go-ethereum/rpc.(*Client).dispatch in goroutine 4625
+        /Users/gashkov/dev/go-ethereum/rpc/client.go:638 +0x2d4
+
+goroutine 4258 [select, 1 minutes]:
+github.com/ethereum/go-ethereum/eth/downloader.(*Downloader).stateFetcher(0xc000efcea0)
+        /Users/gashkov/dev/go-ethereum/eth/downloader/statesync.go:47 +0xfc
+created by github.com/ethereum/go-ethereum/eth/downloader.New in goroutine 1
+        /Users/gashkov/dev/go-ethereum/eth/downloader/downloader.go:240 +0x7dc
+
+goroutine 79 [select, 1 minutes]:
+github.com/ethereum/go-ethereum/core/state.(*subfetcher).loop(0xc0009b4300)
+        /Users/gashkov/dev/go-ethereum/core/state/trie_prefetcher.go:319 +0x9f4
+created by github.com/ethereum/go-ethereum/core/state.newSubfetcher in goroutine 4260
+        /Users/gashkov/dev/go-ethereum/core/state/trie_prefetcher.go:246 +0x46c
+
+goroutine 4383 [chan receive, 1 minutes]:
+github.com/ethereum/go-ethereum/core/txpool/legacypool.(*LegacyPool).Reset(0xc0003b9c00, 0xc000b3e000, 0xc000273900)
+        /Users/gashkov/dev/go-ethereum/core/txpool/legacypool/legacypool.go:418 +0x70
+github.com/ethereum/go-ethereum/core/txpool.(*TxPool).loop.func2(0xc000b3e000, 0xc000273900)
+        /Users/gashkov/dev/go-ethereum/core/txpool/txpool.go:224 +0xfc
+created by github.com/ethereum/go-ethereum/core/txpool.(*TxPool).loop in goroutine 2032
+        /Users/gashkov/dev/go-ethereum/core/txpool/txpool.go:222 +0x5b8
+
+goroutine 4337 [select, 1 minutes]:
+github.com/ethereum/go-ethereum/eth.(*handler).protoTracker(0xc00031ef70)
+        /Users/gashkov/dev/go-ethereum/eth/handler.go:294 +0x1e8
+created by github.com/ethereum/go-ethereum/eth.(*handler).Start in goroutine 1
+        /Users/gashkov/dev/go-ethereum/eth/handler.go:534 +0x558
+
+goroutine 4342 [select, 1 minutes]:
+net.(*pipe).read(0xc000986a80, {0xc00024a200, 0x200, 0x200})
+        /Users/gashkov/.asdf/installs/golang/1.21.0/go/src/net/pipe.go:159 +0x2f8
+net.(*pipe).Read(0xc000986a80, {0xc00024a200, 0x200, 0x200})
+        /Users/gashkov/.asdf/installs/golang/1.21.0/go/src/net/pipe.go:142 +0x70
+encoding/json.(*Decoder).refill(0xc0000c52c0)
+        /Users/gashkov/.asdf/installs/golang/1.21.0/go/src/encoding/json/stream.go:165 +0x4e4
+encoding/json.(*Decoder).readValue(0xc0000c52c0)
+        /Users/gashkov/.asdf/installs/golang/1.21.0/go/src/encoding/json/stream.go:140 +0x5fc
+encoding/json.(*Decoder).Decode(0xc0000c52c0, {0x106d08860, 0xc000258a68})
+        /Users/gashkov/.asdf/installs/golang/1.21.0/go/src/encoding/json/stream.go:63 +0x10c
+github.com/ethereum/go-ethereum/rpc.(*jsonCodec).readBatch(0xc0000c1a90)
+        /Users/gashkov/dev/go-ethereum/rpc/json.go:236 +0xd4
+github.com/ethereum/go-ethereum/rpc.(*Client).read(0xc0004902d0, {0x106f69cb0, 0xc0000c1a90})
+        /Users/gashkov/dev/go-ethereum/rpc/client.go:714 +0x60
+created by github.com/ethereum/go-ethereum/rpc.(*Client).dispatch in goroutine 4340
+        /Users/gashkov/dev/go-ethereum/rpc/client.go:638 +0x2d4
+
+goroutine 4341 [chan receive, 1 minutes]:
+main.startNode.func1()
+        /Users/gashkov/dev/go-ethereum/cmd/geth/main.go:376 +0x3bc
+created by main.startNode in goroutine 1
+        /Users/gashkov/dev/go-ethereum/cmd/geth/main.go:368 +0x26c
+
+goroutine 4340 [select, 1 minutes]:
+github.com/ethereum/go-ethereum/rpc.(*Client).dispatch(0xc0004902d0, {0x106f69cb0, 0xc0000c1a90})
+        /Users/gashkov/dev/go-ethereum/rpc/client.go:641 +0x508
+created by github.com/ethereum/go-ethereum/rpc.initClient in goroutine 1
+        /Users/gashkov/dev/go-ethereum/rpc/client.go:269 +0x898
+
+goroutine 4339 [chan receive, 1 minutes]:
+github.com/ethereum/go-ethereum/rpc.(*Server).ServeCodec(0xc00029c7d0, {0x106f69cb0, 0xc0000c1a40}, 0x0)
+        /Users/gashkov/dev/go-ethereum/rpc/server.go:117 +0x3e8
+created by github.com/ethereum/go-ethereum/rpc.DialInProc.func1 in goroutine 1
+        /Users/gashkov/dev/go-ethereum/rpc/inproc.go:30 +0x1d8
+
+goroutine 4338 [chan receive, 1 minutes]:
+github.com/ethereum/go-ethereum/cmd/utils.StartNode.func1()
+        /Users/gashkov/dev/go-ethereum/cmd/utils/cmd.go:120 +0x6c8
+created by github.com/ethereum/go-ethereum/cmd/utils.StartNode in goroutine 1
+        /Users/gashkov/dev/go-ethereum/cmd/utils/cmd.go:81 +0x270
+
+goroutine 4334 [select, 1 minutes]:
+github.com/ethereum/go-ethereum/eth.(*handler).txBroadcastLoop(0xc00031ef70)
+        /Users/gashkov/dev/go-ethereum/eth/handler.go:668 +0x1cc
+created by github.com/ethereum/go-ethereum/eth.(*handler).Start in goroutine 1
+        /Users/gashkov/dev/go-ethereum/eth/handler.go:521 +0x24c
+
+goroutine 4336 [select, 1 minutes]:
+github.com/ethereum/go-ethereum/eth.(*chainSyncer).loop(0xc000112280)
+        /Users/gashkov/dev/go-ethereum/eth/sync.go:108 +0x718
+created by github.com/ethereum/go-ethereum/eth.(*handler).Start in goroutine 1
+        /Users/gashkov/dev/go-ethereum/eth/handler.go:530 +0x4ac
+
+goroutine 4335 [chan receive, 1 minutes]:
+github.com/ethereum/go-ethereum/eth.(*handler).minedBroadcastLoop(0xc00031ef70)
+        /Users/gashkov/dev/go-ethereum/eth/handler.go:656 +0x138
+created by github.com/ethereum/go-ethereum/eth.(*handler).Start in goroutine 1
+        /Users/gashkov/dev/go-ethereum/eth/handler.go:526 +0x3e8
+
+goroutine 4332 [select, 1 minutes]:
+github.com/ethereum/go-ethereum/internal/shutdowncheck.(*ShutdownTracker).Start.func1()
+        /Users/gashkov/dev/go-ethereum/internal/shutdowncheck/shutdown_tracker.go:69 +0x1bc
+created by github.com/ethereum/go-ethereum/internal/shutdowncheck.(*ShutdownTracker).Start in goroutine 1
+        /Users/gashkov/dev/go-ethereum/internal/shutdowncheck/shutdown_tracker.go:65 +0xb0
+
+goroutine 4331 [select, 1 minutes]:
+github.com/ethereum/go-ethereum/eth.(*Ethereum).startBloomHandlers.func1()
+        /Users/gashkov/dev/go-ethereum/eth/bloombits.go:50 +0x114
+created by github.com/ethereum/go-ethereum/eth.(*Ethereum).startBloomHandlers in goroutine 1
+        /Users/gashkov/dev/go-ethereum/eth/bloombits.go:48 +0xf4
+
+goroutine 4330 [select, 1 minutes]:
+github.com/ethereum/go-ethereum/eth.(*Ethereum).startBloomHandlers.func1()
+        /Users/gashkov/dev/go-ethereum/eth/bloombits.go:50 +0x114
+created by github.com/ethereum/go-ethereum/eth.(*Ethereum).startBloomHandlers in goroutine 1
+        /Users/gashkov/dev/go-ethereum/eth/bloombits.go:48 +0xf4
+
+goroutine 4326 [select, 1 minutes]:
+github.com/ethereum/go-ethereum/eth.(*Ethereum).startBloomHandlers.func1()
+        /Users/gashkov/dev/go-ethereum/eth/bloombits.go:50 +0x114
+created by github.com/ethereum/go-ethereum/eth.(*Ethereum).startBloomHandlers in goroutine 1
+        /Users/gashkov/dev/go-ethereum/eth/bloombits.go:48 +0xf4
+
+goroutine 4329 [select, 1 minutes]:
+github.com/ethereum/go-ethereum/eth.(*Ethereum).startBloomHandlers.func1()
+        /Users/gashkov/dev/go-ethereum/eth/bloombits.go:50 +0x114
+created by github.com/ethereum/go-ethereum/eth.(*Ethereum).startBloomHandlers in goroutine 1
+        /Users/gashkov/dev/go-ethereum/eth/bloombits.go:48 +0xf4
+
+goroutine 4328 [select, 1 minutes]:
+github.com/ethereum/go-ethereum/eth.(*Ethereum).startBloomHandlers.func1()
+        /Users/gashkov/dev/go-ethereum/eth/bloombits.go:50 +0x114
+created by github.com/ethereum/go-ethereum/eth.(*Ethereum).startBloomHandlers in goroutine 1
+        /Users/gashkov/dev/go-ethereum/eth/bloombits.go:48 +0xf4
+
+goroutine 4327 [select, 1 minutes]:
+github.com/ethereum/go-ethereum/eth.(*Ethereum).startBloomHandlers.func1()
+        /Users/gashkov/dev/go-ethereum/eth/bloombits.go:50 +0x114
+created by github.com/ethereum/go-ethereum/eth.(*Ethereum).startBloomHandlers in goroutine 1
+        /Users/gashkov/dev/go-ethereum/eth/bloombits.go:48 +0xf4
+
+goroutine 4291 [select, 1 minutes]:
+github.com/ethereum/go-ethereum/event.JoinSubscriptions.func1.2({0x106f5f6e0, 0xc00011a1c0})
+        /Users/gashkov/dev/go-ethereum/event/multisub.go:33 +0xe4
+created by github.com/ethereum/go-ethereum/event.JoinSubscriptions.func1 in goroutine 4276
+        /Users/gashkov/dev/go-ethereum/event/multisub.go:32 +0x398
+
+goroutine 4299 [select, 1 minutes]:
+net.(*pipe).read(0xc000986a00, {0xc0001fe600, 0x200, 0x200})
+        /Users/gashkov/.asdf/installs/golang/1.21.0/go/src/net/pipe.go:159 +0x2f8
+net.(*pipe).Read(0xc000986a00, {0xc0001fe600, 0x200, 0x200})
+        /Users/gashkov/.asdf/installs/golang/1.21.0/go/src/net/pipe.go:142 +0x70
+encoding/json.(*Decoder).refill(0xc0000c4f00)
+        /Users/gashkov/.asdf/installs/golang/1.21.0/go/src/encoding/json/stream.go:165 +0x4e4
+encoding/json.(*Decoder).readValue(0xc0000c4f00)
+        /Users/gashkov/.asdf/installs/golang/1.21.0/go/src/encoding/json/stream.go:140 +0x5fc
+encoding/json.(*Decoder).Decode(0xc0000c4f00, {0x106d08860, 0xc0008b8060})
+        /Users/gashkov/.asdf/installs/golang/1.21.0/go/src/encoding/json/stream.go:63 +0x10c
+github.com/ethereum/go-ethereum/rpc.(*jsonCodec).readBatch(0xc0000c1a40)
+        /Users/gashkov/dev/go-ethereum/rpc/json.go:236 +0xd4
+github.com/ethereum/go-ethereum/rpc.(*Client).read(0xc0001681b0, {0x106f69cb0, 0xc0000c1a40})
+        /Users/gashkov/dev/go-ethereum/rpc/client.go:714 +0x60
+created by github.com/ethereum/go-ethereum/rpc.(*Client).dispatch in goroutine 4298
+        /Users/gashkov/dev/go-ethereum/rpc/client.go:638 +0x2d4
+
+goroutine 4263 [select, 1 minutes]:
+github.com/ethereum/go-ethereum/miner.(*worker).taskLoop(0xc00038f200)
+        /Users/gashkov/dev/go-ethereum/miner/worker.go:614 +0x250
+created by github.com/ethereum/go-ethereum/miner.newWorker in goroutine 1
+        /Users/gashkov/dev/go-ethereum/miner/worker.go:297 +0x146c
+
+goroutine 4324 [select, 1 minutes]:
+github.com/ethereum/go-ethereum/eth.(*Ethereum).startBloomHandlers.func1()
+        /Users/gashkov/dev/go-ethereum/eth/bloombits.go:50 +0x114
+created by github.com/ethereum/go-ethereum/eth.(*Ethereum).startBloomHandlers in goroutine 1
+        /Users/gashkov/dev/go-ethereum/eth/bloombits.go:48 +0xf4
+
+goroutine 69 [select, 1 minutes]:
+github.com/ethereum/go-ethereum/event.JoinSubscriptions.func1.2({0x106f5f6e0, 0xc0000300c0})
+        /Users/gashkov/dev/go-ethereum/event/multisub.go:33 +0xe4
+created by github.com/ethereum/go-ethereum/event.JoinSubscriptions.func1 in goroutine 67
+        /Users/gashkov/dev/go-ethereum/event/multisub.go:32 +0x398
+
+goroutine 68 [select, 1 minutes]:
+github.com/ethereum/go-ethereum/event.JoinSubscriptions.func1.2({0x106f5f6e0, 0xc000030080})
+        /Users/gashkov/dev/go-ethereum/event/multisub.go:33 +0xe4
+created by github.com/ethereum/go-ethereum/event.JoinSubscriptions.func1 in goroutine 67
+        /Users/gashkov/dev/go-ethereum/event/multisub.go:32 +0x398
+
+goroutine 4322 [select, 1 minutes]:
+github.com/ethereum/go-ethereum/eth.(*Ethereum).startBloomHandlers.func1()
+        /Users/gashkov/dev/go-ethereum/eth/bloombits.go:50 +0x114
+created by github.com/ethereum/go-ethereum/eth.(*Ethereum).startBloomHandlers in goroutine 1
+        /Users/gashkov/dev/go-ethereum/eth/bloombits.go:48 +0xf4

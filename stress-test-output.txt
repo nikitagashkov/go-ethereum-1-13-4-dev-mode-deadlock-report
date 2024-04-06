@@ -1,0 +1,19 @@
+% go run main.go
+2024/04/06 20:13:14 coinbase=0xfb8c69691E914275e19Eb9d42735844A120067aD
+2024/04/06 20:13:14 nonce=0x0
+2024/04/06 20:13:15 sent tx hash=0xad155b491b06bffa28d2e0ebd4cf4f85a8e5bec108428cb2492b0048395fc3b7 nonce=2 blockNumber=1
+2024/04/06 20:13:15 sent tx hash=0x7c7d61049a6118838cb0babd50aa05d5f8feece647637313d2e432dc2448e6e4 nonce=1 blockNumber=1
+2024/04/06 20:13:15 sent tx hash=0xa53f94890c86c1d20f6c6398c8cd07d8c91bad816c91b7119c525f597ae7237a nonce=0 blockNumber=1
+2024/04/06 20:13:15 sent tx hash=0x06bbb3c89850442f73ac53fff35b42a529dac62dde0167480455dda21e4b54e4 nonce=4 blockNumber=1
+2024/04/06 20:13:15 sent tx hash=0xb55986ad438a261b8225e6384eba83a3dd710f196a5105526f149d0c8f85c0a8 nonce=3 blockNumber=1
+2024/04/06 20:13:15 sent tx hash=0xc2f5aa3063d679fd39d9f2495577cb204519e9b8ecd68065155083f9c13a9aae nonce=7 blockNumber=2
+2024/04/06 20:13:15 sent tx hash=0xedb2c69e889019102540da5800c4717aa3e9178fa9f8a8e4ac260235827b122d nonce=5 blockNumber=2
+2024/04/06 20:13:15 sent tx hash=0xcc36386a360e4c35ccf7da2cd6d87ec4509f619f6f1620a3a9e3c43d0a050f71 nonce=6 blockNumber=2
+2024/04/06 20:13:15 sent tx hash=0xf7f8a37a85beb5d366c989295cd46961a9e2bb59fac54b58fcb69fd93c7caa25 nonce=8 blockNumber=2
+2024/04/06 20:13:16 error waiting tx nonce=9 err=timeout waiting tx hash=0x9b54d66bb30c77334f95e2931ca4ab6f11f61b139af1a6fc517b3fb4fe8b5e93 to be mined
+2024/04/06 20:13:16 error waiting tx nonce=11 err=timeout waiting tx hash=0x6bd2490d9e4539f37ef2493389cd1066a25b32b4b2f50076e2824437335ead8f to be mined
+2024/04/06 20:13:16 error waiting tx nonce=13 err=timeout waiting tx hash=0x2298fea2beeae800aa07c9e1751de1a4995d3fc506e0af3fc9039d77e89309e9 to be mined
+2024/04/06 20:13:16 error waiting tx nonce=10 err=timeout waiting tx hash=0x034b4941ac6c1de3fd8e32b5c9d9976fb5896c6dbd6f37e9bb019db9e136d825 to be mined
+2024/04/06 20:13:16 error waiting tx nonce=12 err=timeout waiting tx hash=0x24ca4ec05d745c4271e7b4a70d7a74d403daa38306ef7a6f6ae01a8394db7964 to be mined
+2024/04/06 20:13:17 error waiting tx nonce=14 err=timeout waiting tx hash=0x2120f1d967a28ba0c467fd6c638db89959d64a92872569e7e0869ba0f3abad43 to be mined
+2024/04/06 20:13:17 error waiting tx nonce=15 err=timeout waiting tx hash=0xb0e0165e29eb44545cd852da79937ad50c5933bead69cf54fbc122b5b50163e6 to be mined

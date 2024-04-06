@@ -1,0 +1,28 @@
+% curl \
+  -s \
+  -X POST http://localhost:8545/ \
+  -H 'content-type: application/json' \
+  -H 'accept: application/json, */*;q=0.5' \
+  -d '{"jsonrpc":"2.0","id":"1","method":"txpool_inspect","params":[]}' | jq
+
+{
+  "jsonrpc": "2.0",
+  "id": "1",
+  "result": {
+    "pending": {
+      "0xfb8c69691E914275e19Eb9d42735844A120067aD": {
+        "9": "0xfb8c69691E914275e19Eb9d42735844A120067aD: 0 wei + 21000 gas × 1750000001 wei"
+      }
+    },
+    "queued": {
+      "0xfb8c69691E914275e19Eb9d42735844A120067aD": {
+        "10": "0xfb8c69691E914275e19Eb9d42735844A120067aD: 0 wei + 21000 gas × 1535240671 wei",
+        "11": "0xfb8c69691E914275e19Eb9d42735844A120067aD: 0 wei + 21000 gas × 1535240671 wei",
+        "12": "0xfb8c69691E914275e19Eb9d42735844A120067aD: 0 wei + 21000 gas × 1535240671 wei",
+        "13": "0xfb8c69691E914275e19Eb9d42735844A120067aD: 0 wei + 21000 gas × 1535240671 wei",
+        "14": "0xfb8c69691E914275e19Eb9d42735844A120067aD: 0 wei + 21000 gas × 1535240671 wei",
+        "15": "0xfb8c69691E914275e19Eb9d42735844A120067aD: 0 wei + 21000 gas × 1535240671 wei"
+      }
+    }
+  }
+}

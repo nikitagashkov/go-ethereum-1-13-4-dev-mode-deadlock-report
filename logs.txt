@@ -1,0 +1,316 @@
+GOROOT=/Users/gashkov/.asdf/installs/golang/1.21.0/go #gosetup
+GOPATH=/Users/gashkov/.asdf/installs/golang/1.21.0/packages #gosetup
+/Users/gashkov/.asdf/installs/golang/1.21.0/go/bin/go build -race -o /Users/gashkov/Library/Caches/JetBrains/GoLand2023.3/tmp/GoLand/___1go_build_github_com_ethereum_go_ethereum_cmd_geth -gcflags all=-N -l github.com/ethereum/go-ethereum/cmd/geth #gosetup
+# github.com/karalabe/usb
+In file included from /Users/gashkov/.asdf/installs/golang/1.21.0/packages/pkg/mod/github.com/karalabe/usb@v0.0.2/libs.go:50:
+/Users/gashkov/.asdf/installs/golang/1.21.0/packages/pkg/mod/github.com/karalabe/usb@v0.0.2/libusb/libusb/os/darwin_usb.c:53:29: warning: macro 'ATOMIC_VAR_INIT' has been marked as deprecated [-Wdeprecated-pragma]
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/15.0.0/include/stdatomic.h:54:41: note: macro marked 'deprecated' here
+/Users/gashkov/Applications/GoLand.app/Contents/plugins/go-plugin/lib/dlv/macarm/dlv --listen=127.0.0.1:50626 --headless=true --api-version=2 --check-go-version=false --only-same-user=false exec /Users/gashkov/Library/Caches/JetBrains/GoLand2023.3/tmp/GoLand/___1go_build_github_com_ethereum_go_ethereum_cmd_geth -- --verbosity=5 --dev --http --http.addr=0.0.0.0 --http.vhosts=* --http.api=admin,debug,web3,eth,txpool,personal,miner,net,dev
+API server listening at: 127.0.0.1:50626
+debugserver-@(#)PROGRAM:LLDB  PROJECT:lldb-1500.0.404.7
+ for arm64.
+Got a connection, launched process /Users/gashkov/Library/Caches/JetBrains/GoLand2023.3/tmp/GoLand/___1go_build_github_com_ethereum_go_ethereum_cmd_geth (pid = 30418).
+INFO [04-06|20:13:05.423] Starting Geth in ephemeral dev mode...
+WARN [04-06|20:13:05.423] You are running Geth in --dev mode. Please note the following:
+
+  1. This mode is only intended for fast, iterative development without assumptions on
+     security or persistence.
+  2. The database is created in memory unless specified otherwise. Therefore, shutting down
+     your computer or losing power will wipe your entire block data and chain state for
+     your dev environment.
+  3. A random, pre-allocated developer account will be available and unlocked as
+     eth.coinbase, which can be used for testing. The random dev account is temporary,
+     stored on a ramdisk, and will be lost if your machine is restarted.
+  4. Mining is enabled by default. However, the client will only seal blocks if transactions
+     are pending in the mempool. The miner's minimum accepted gas price is 1.
+  5. Networking is disabled; there is no listen-address, the maximum number of peers is set
+     to 0, and discovery is disabled.
+
+INFO [04-06|20:13:05.435] Maximum peer count                       ETH=50 total=50
+DEBUG[04-06|20:13:05.463] FS scan times                            list="80.792µs" set="1.125µs" diff="1.791µs"
+TRACE[04-06|20:13:05.463] Started watching keystore folder         path=/var/folders/qx/9y7_4y614wg1pnkhdcmpq_km0000gn/T/go-ethereum-keystore4071839221 folder=/var/folders/qx/9y7_4y614wg1pnkhdcmpq_km0000gn/T/go-ethereum-keystore4071839221
+DEBUG[04-06|20:13:05.478] Sanitizing Go's GC trigger               percent=100
+INFO [04-06|20:13:05.488] Set global gas cap                       cap=50,000,000
+DEBUG[04-06|20:13:06.472] FS scan times                            list="81.458µs" set="25.833µs" diff="3.625µs"
+TRACE[04-06|20:13:06.472] Handled keystore changes                 time="134.75µs"
+INFO [04-06|20:13:06.927] Using developer account                  address=0xfb8c69691E914275e19Eb9d42735844A120067aD
+INFO [04-06|20:13:06.929] Initializing the KZG library             backend=gokzg
+INFO [04-06|20:13:07.129] Allocated trie memory caches             clean=154.00MiB dirty=256.00MiB
+INFO [04-06|20:13:07.129] State schema set to default              scheme=hash
+INFO [04-06|20:13:07.129] Initialising Ethereum protocol           network=1337 dbversion=<nil>
+INFO [04-06|20:13:07.130] Writing custom genesis block
+INFO [04-06|20:13:07.134] Persisted trie from memory database      nodes=13 size=1.91KiB time="152.709µs" gcnodes=0 gcsize=0.00B gctime=0s livenodes=0 livesize=0.00B
+INFO [04-06|20:13:07.135]
+INFO [04-06|20:13:07.135] ---------------------------------------------------------------------------------------------------------------------------------------------------------
+INFO [04-06|20:13:07.135] Chain ID:  1337 (unknown)
+INFO [04-06|20:13:07.135] Consensus: unknown
+INFO [04-06|20:13:07.135]
+INFO [04-06|20:13:07.135] Pre-Merge hard forks (block based):
+INFO [04-06|20:13:07.135]  - Homestead:                   #0        (https://github.com/ethereum/execution-specs/blob/master/network-upgrades/mainnet-upgrades/homestead.md)
+INFO [04-06|20:13:07.135]  - Tangerine Whistle (EIP 150): #0        (https://github.com/ethereum/execution-specs/blob/master/network-upgrades/mainnet-upgrades/tangerine-whistle.md)
+INFO [04-06|20:13:07.135]  - Spurious Dragon/1 (EIP 155): #0        (https://github.com/ethereum/execution-specs/blob/master/network-upgrades/mainnet-upgrades/spurious-dragon.md)
+INFO [04-06|20:13:07.135]  - Spurious Dragon/2 (EIP 158): #0        (https://github.com/ethereum/execution-specs/blob/master/network-upgrades/mainnet-upgrades/spurious-dragon.md)
+INFO [04-06|20:13:07.135]  - Byzantium:                   #0        (https://github.com/ethereum/execution-specs/blob/master/network-upgrades/mainnet-upgrades/byzantium.md)
+INFO [04-06|20:13:07.135]  - Constantinople:              #0        (https://github.com/ethereum/execution-specs/blob/master/network-upgrades/mainnet-upgrades/constantinople.md)
+INFO [04-06|20:13:07.135]  - Petersburg:                  #0        (https://github.com/ethereum/execution-specs/blob/master/network-upgrades/mainnet-upgrades/petersburg.md)
+INFO [04-06|20:13:07.135]  - Istanbul:                    #0        (https://github.com/ethereum/execution-specs/blob/master/network-upgrades/mainnet-upgrades/istanbul.md)
+INFO [04-06|20:13:07.135]  - Muir Glacier:                #0        (https://github.com/ethereum/execution-specs/blob/master/network-upgrades/mainnet-upgrades/muir-glacier.md)
+INFO [04-06|20:13:07.135]  - Berlin:                      #0        (https://github.com/ethereum/execution-specs/blob/master/network-upgrades/mainnet-upgrades/berlin.md)
+INFO [04-06|20:13:07.135]  - London:                      #0        (https://github.com/ethereum/execution-specs/blob/master/network-upgrades/mainnet-upgrades/london.md)
+INFO [04-06|20:13:07.135]  - Arrow Glacier:               #0        (https://github.com/ethereum/execution-specs/blob/master/network-upgrades/mainnet-upgrades/arrow-glacier.md)
+INFO [04-06|20:13:07.135]  - Gray Glacier:                #0        (https://github.com/ethereum/execution-specs/blob/master/network-upgrades/mainnet-upgrades/gray-glacier.md)
+INFO [04-06|20:13:07.135]
+INFO [04-06|20:13:07.135] Merge configured:
+INFO [04-06|20:13:07.135]  - Hard-fork specification:    https://github.com/ethereum/execution-specs/blob/master/network-upgrades/mainnet-upgrades/paris.md
+INFO [04-06|20:13:07.135]  - Network known to be merged: true
+INFO [04-06|20:13:07.135]  - Total terminal difficulty:  0
+INFO [04-06|20:13:07.135]
+INFO [04-06|20:13:07.135] Post-Merge hard forks (timestamp based):
+INFO [04-06|20:13:07.135]  - Shanghai:                    @0          (https://github.com/ethereum/execution-specs/blob/master/network-upgrades/mainnet-upgrades/shanghai.md)
+INFO [04-06|20:13:07.135]
+INFO [04-06|20:13:07.135] ---------------------------------------------------------------------------------------------------------------------------------------------------------
+INFO [04-06|20:13:07.135]
+INFO [04-06|20:13:07.136] Loaded most recent local block           number=0 hash=f0054e..040698 td=1 age=55y2w5d
+WARN [04-06|20:13:07.136] Failed to load snapshot                  err="missing or corrupted snapshot"
+INFO [04-06|20:13:07.136] Rebuilding state snapshot
+DEBUG[04-06|20:13:07.136] Journalled generator progress            progress=empty
+DEBUG[04-06|20:13:07.137] Start snapshot generation                root=292003..bb4642
+INFO [04-06|20:13:07.137] Initialized transaction indexer          range="last 2350000 blocks"
+INFO [04-06|20:13:07.137] Resuming state snapshot generation       root=292003..bb4642 accounts=0 slots=0 storage=0.00B dangling=0 elapsed="945.834µs"
+TRACE[04-06|20:13:07.137] Detected outdated state range            kind=account prefix=0x61 last=0x err="wrong root: have 0x56e81f171bcc55a6ff8345e692c0f86e5b48e01b996cadc001622fb5e363b421 want 0x292003900d0d40ffa64b2748be0b3b8b5a8f53bb9ef6b0860fcc8ea2c9bb4642"
+DEBUG[04-06|20:13:07.137] Regenerated state range                  kind=account prefix=0x61 root=292003..bb4642 last=0x count=10 created=10 updated=0 untouched=0 deleted=0
+DEBUG[04-06|20:13:07.137] Journalled generator progress            progress=done
+INFO [04-06|20:13:07.137] Generated state snapshot                 accounts=10 slots=0 storage=412.00B dangling=0 elapsed=1.745ms
+DEBUG[04-06|20:13:07.141] Blobpool tip threshold updated           tip=1
+INFO [04-06|20:13:07.143] Chain post-merge, sync via beacon client
+INFO [04-06|20:13:07.143] Gasprice oracle is ignoring threshold set threshold=2
+TRACE[04-06|20:13:07.143] Decrease miner recommit interval         from=2s to=2s
+TRACE[04-06|20:13:07.145] Engine API request received              method=ForkchoiceUpdated head=f0054e..040698 finalized=f0054e..040698 safe=f0054e..040698
+INFO [04-06|20:13:07.145] Entered PoS stage
+INFO [04-06|20:13:07.145] Starting peer-to-peer node               instance=Geth/v1.13.14-stable-2bd6bd01/darwin-arm64/go1.21.0
+WARN [04-06|20:13:07.145] P2P server will be useless, neither dialing nor listening
+INFO [04-06|20:13:07.148] New local node record                    seq=1,712,427,187,146 id=6079679482be1efd ip=127.0.0.1 udp=0 tcp=0
+INFO [04-06|20:13:07.148] Started P2P networking                   self=enode://a3e8bd63955696217e275827bd93e35d49ecd4515d7a47eadff62a570e4e115c62fcb35f231c0e2542cbaa3c84576bbb7912fd54b94128f9ba41389ca7af5b26@127.0.0.1:0
+DEBUG[04-06|20:13:07.150] IPCs registered                          namespaces=admin,debug,web3,eth,txpool,miner,net,dev
+INFO [04-06|20:13:07.150] IPC endpoint opened                      url=/var/folders/qx/9y7_4y614wg1pnkhdcmpq_km0000gn/T/geth.ipc
+INFO [04-06|20:13:07.152] HTTP server started                      endpoint=[::]:8545 auth=false prefix= cors= vhosts=*
+DEBUG[04-06|20:13:09.381] External IP changed                      ip="&{ch:0xc00018ea80 clock:{} timer:0xc0005e6230 deadline:148672697295416}" interface="UPNP IGDv1-IP1"
+DEBUG[04-06|20:13:14.389] Served eth_coinbase                      conn=[::1]:50687 reqid=1 duration="280.333µs"
+DEBUG[04-06|20:13:14.392] Served eth_getTransactionCount           conn=[::1]:50687 reqid=2 duration="468.833µs"
+TRACE[04-06|20:13:14.396] Estimate gas usage automatically         gas=0x5208
+TRACE[04-06|20:13:14.396] Estimate gas usage automatically         gas=0x5208
+TRACE[04-06|20:13:14.396] Estimate gas usage automatically         gas=0x5208
+TRACE[04-06|20:13:14.397] Estimate gas usage automatically         gas=0x5208
+TRACE[04-06|20:13:14.398] Estimate gas usage automatically         gas=0x5208
+INFO [04-06|20:13:14.401] Setting new local account                address=0xfb8c69691E914275e19Eb9d42735844A120067aD
+TRACE[04-06|20:13:14.401] Pooled new future transaction            hash=ad155b..5fc3b7 from=0xfb8c69691E914275e19Eb9d42735844A120067aD to=0xfb8c69691E914275e19Eb9d42735844A120067aD
+INFO [04-06|20:13:14.402] Submitted transaction                    hash=0xad155b491b06bffa28d2e0ebd4cf4f85a8e5bec108428cb2492b0048395fc3b7 from=0xfb8c69691E914275e19Eb9d42735844A120067aD nonce=2 recipient=0xfb8c69691E914275e19Eb9d42735844A120067aD value=0
+DEBUG[04-06|20:13:14.402] Served eth_sendTransaction               conn=[::1]:50691 reqid=6 duration=6.606084ms
+TRACE[04-06|20:13:14.403] Pooled new future transaction            hash=b55986..85c0a8 from=0xfb8c69691E914275e19Eb9d42735844A120067aD to=0xfb8c69691E914275e19Eb9d42735844A120067aD
+INFO [04-06|20:13:14.403] Submitted transaction                    hash=0xb55986ad438a261b8225e6384eba83a3dd710f196a5105526f149d0c8f85c0a8 from=0xfb8c69691E914275e19Eb9d42735844A120067aD nonce=3 recipient=0xfb8c69691E914275e19Eb9d42735844A120067aD value=0
+DEBUG[04-06|20:13:14.403] Served eth_sendTransaction               conn=[::1]:50690 reqid=7 duration=6.357542ms
+TRACE[04-06|20:13:14.404] Pooled new future transaction            hash=7c7d61..48e6e4 from=0xfb8c69691E914275e19Eb9d42735844A120067aD to=0xfb8c69691E914275e19Eb9d42735844A120067aD
+INFO [04-06|20:13:14.404] Submitted transaction                    hash=0x7c7d61049a6118838cb0babd50aa05d5f8feece647637313d2e432dc2448e6e4 from=0xfb8c69691E914275e19Eb9d42735844A120067aD nonce=1 recipient=0xfb8c69691E914275e19Eb9d42735844A120067aD value=0
+DEBUG[04-06|20:13:14.405] Served eth_sendTransaction               conn=[::1]:50687 reqid=4 duration=10.634541ms
+TRACE[04-06|20:13:14.405] Removed old queued transactions          count=0
+TRACE[04-06|20:13:14.409] Removed unpayable queued transactions    count=0
+TRACE[04-06|20:13:14.409] Promoted queued transactions             count=0
+WARN [04-06|20:13:14.410] Served eth_getTransactionReceipt         conn=[::1]:50691 reqid=8 duration="264.084µs" err="transaction indexing is in progress" errdata="transaction indexing is in progress"
+WARN [04-06|20:13:14.411] Served eth_getTransactionReceipt         conn=[::1]:50690 reqid=9 duration="164.709µs" err="transaction indexing is in progress" errdata="transaction indexing is in progress"
+TRACE[04-06|20:13:14.411] Pooled new future transaction            hash=a53f94..e7237a from=0xfb8c69691E914275e19Eb9d42735844A120067aD to=0xfb8c69691E914275e19Eb9d42735844A120067aD
+INFO [04-06|20:13:14.411] Submitted transaction                    hash=0xa53f94890c86c1d20f6c6398c8cd07d8c91bad816c91b7119c525f597ae7237a from=0xfb8c69691E914275e19Eb9d42735844A120067aD nonce=0 recipient=0xfb8c69691E914275e19Eb9d42735844A120067aD value=0
+DEBUG[04-06|20:13:14.413] Served eth_sendTransaction               conn=[::1]:50689 reqid=5 duration=18.035708ms
+TRACE[04-06|20:13:14.414] Pooled new future transaction            hash=06bbb3..4b54e4 from=0xfb8c69691E914275e19Eb9d42735844A120067aD to=0xfb8c69691E914275e19Eb9d42735844A120067aD
+WARN [04-06|20:13:14.413] Served eth_getTransactionReceipt         conn=[::1]:50687 reqid=10 duration="183.834µs" err="transaction indexing is in progress" errdata="transaction indexing is in progress"
+TRACE[04-06|20:13:14.414] Removed old queued transactions          count=0
+TRACE[04-06|20:13:14.414] Removed unpayable queued transactions    count=0
+TRACE[04-06|20:13:14.414] Promoted queued transactions             count=5
+DEBUG[04-06|20:13:14.415] Distributed transactions                 plaintxs=5 blobtxs=0 largetxs=0 bcastpeers=0 bcastcount=0 annpeers=0 anncount=0
+TRACE[04-06|20:13:14.415] Engine API request received              method=ForkchoiceUpdated head=f0054e..040698 finalized=f0054e..040698 safe=f0054e..040698
+INFO [04-06|20:13:14.416] Submitted transaction                    hash=0x06bbb3c89850442f73ac53fff35b42a529dac62dde0167480455dda21e4b54e4 from=0xfb8c69691E914275e19Eb9d42735844A120067aD nonce=4 recipient=0xfb8c69691E914275e19Eb9d42735844A120067aD value=0
+DEBUG[04-06|20:13:14.416] Served eth_sendTransaction               conn=[::1]:50688 reqid=3 duration=21.392959ms
+DEBUG[04-06|20:13:14.418] Reinjecting stale transactions           count=0
+WARN [04-06|20:13:14.419] Served eth_getTransactionReceipt         conn=[::1]:50690 reqid=11 duration="214.625µs" err="transaction indexing is in progress" errdata="transaction indexing is in progress"
+WARN [04-06|20:13:14.420] Served eth_getTransactionReceipt         conn=[::1]:50688 reqid=12 duration="226.125µs" err="transaction indexing is in progress" errdata="transaction indexing is in progress"
+INFO [04-06|20:13:14.422] Starting work on payload                 id=0x02b31fa2468f5390
+TRACE[04-06|20:13:14.422] Engine API request received              method=GetPayload        id=0x02b31fa2468f5390
+INFO [04-06|20:13:14.425] Updated payload                          id=0x02b31fa2468f5390 number=1 hash=4052dd..27bc10 txs=5 withdrawals=0 gas=105,000 fees=1.05e-13 root=89da34..5c888e elapsed=2.605ms
+INFO [04-06|20:13:14.425] Stopping work on payload                 id=0x02b31fa2468f5390 reason=delivery
+TRACE[04-06|20:13:14.425] Engine API request received              method=NewPayload        number=1 hash=4052dd..27bc10
+TRACE[04-06|20:13:14.426] Inserting block without sethead          hash=4052dd..27bc10 number=0x105aaf260
+INFO [04-06|20:13:14.430] Imported new potential chain segment     number=1           hash=4052dd..27bc10 blocks=1 txs=5 mgas=0.105 elapsed=4.039ms     mgasps=25.993 snapdiffs=109.00B triedirty=1.58KiB
+TRACE[04-06|20:13:14.431] Engine API request received              method=ForkchoiceUpdated head=4052dd..27bc10 finalized=f0054e..040698 safe=4052dd..27bc10
+INFO [04-06|20:13:14.432] Chain head was updated                   number=1           hash=4052dd..27bc10 root=89da34..5c888e elapsed="952.084µs"
+DEBUG[04-06|20:13:14.433] Reinjecting stale transactions           count=0
+TRACE[04-06|20:13:14.433] Removed old pending transaction          hash=a53f94..e7237a
+TRACE[04-06|20:13:14.433] Removed old pending transaction          hash=7c7d61..48e6e4
+TRACE[04-06|20:13:14.433] Removed old pending transaction          hash=ad155b..5fc3b7
+TRACE[04-06|20:13:14.433] Removed old pending transaction          hash=b55986..85c0a8
+TRACE[04-06|20:13:14.433] Removed old pending transaction          hash=06bbb3..4b54e4
+TRACE[04-06|20:13:14.433] Decrease miner recommit interval         from=2s to=2s
+INFO [04-06|20:13:14.433] Indexed transactions                     blocks=2 txs=5 tail=0 elapsed="845.625µs"
+DEBUG[04-06|20:13:15.521] Served eth_getTransactionReceipt         conn=[::1]:50691 reqid=14 duration=5.789167ms
+DEBUG[04-06|20:13:15.521] Served eth_getTransactionReceipt         conn=[::1]:50690 reqid=13 duration=6.218459ms
+DEBUG[04-06|20:13:15.523] Served eth_getTransactionReceipt         conn=[::1]:50695 reqid=15 duration=1.635833ms
+DEBUG[04-06|20:13:15.526] Served eth_getTransactionReceipt         conn=[::1]:50696 reqid=16 duration=2.694041ms
+DEBUG[04-06|20:13:15.529] Served eth_getTransactionReceipt         conn=[::1]:50697 reqid=18 duration=2.560041ms
+TRACE[04-06|20:13:15.530] Estimate gas usage automatically         gas=0x5208
+TRACE[04-06|20:13:15.533] Estimate gas usage automatically         gas=0x5208
+TRACE[04-06|20:13:15.533] Estimate gas usage automatically         gas=0x5208
+TRACE[04-06|20:13:15.533] Pooled new future transaction            hash=edb2c6..7b122d from=0xfb8c69691E914275e19Eb9d42735844A120067aD to=0xfb8c69691E914275e19Eb9d42735844A120067aD
+INFO [04-06|20:13:15.534] Submitted transaction                    hash=0xedb2c69e889019102540da5800c4717aa3e9178fa9f8a8e4ac260235827b122d from=0xfb8c69691E914275e19Eb9d42735844A120067aD nonce=5 recipient=0xfb8c69691E914275e19Eb9d42735844A120067aD value=0
+TRACE[04-06|20:13:15.534] Removed old queued transactions          count=0
+DEBUG[04-06|20:13:15.534] Served eth_sendTransaction               conn=[::1]:50691 reqid=17 duration=6.051583ms
+TRACE[04-06|20:13:15.534] Removed unpayable queued transactions    count=0
+TRACE[04-06|20:13:15.535] Promoted queued transactions             count=1
+DEBUG[04-06|20:13:15.535] Distributed transactions                 plaintxs=1 blobtxs=0 largetxs=0 bcastpeers=0 bcastcount=0 annpeers=0 anncount=0
+TRACE[04-06|20:13:15.535] Engine API request received              method=ForkchoiceUpdated head=4052dd..27bc10 finalized=f0054e..040698 safe=4052dd..27bc10
+TRACE[04-06|20:13:15.536] Pooled new future transaction            hash=cc3638..050f71 from=0xfb8c69691E914275e19Eb9d42735844A120067aD to=0xfb8c69691E914275e19Eb9d42735844A120067aD
+INFO [04-06|20:13:15.536] Submitted transaction                    hash=0xcc36386a360e4c35ccf7da2cd6d87ec4509f619f6f1620a3a9e3c43d0a050f71 from=0xfb8c69691E914275e19Eb9d42735844A120067aD nonce=6 recipient=0xfb8c69691E914275e19Eb9d42735844A120067aD value=0
+DEBUG[04-06|20:13:15.536] Served eth_sendTransaction               conn=[::1]:50695 reqid=19 duration=4.931ms
+TRACE[04-06|20:13:15.536] Estimate gas usage automatically         gas=0x5208
+TRACE[04-06|20:13:15.536] Pooled new future transaction            hash=c2f5aa..3a9aae from=0xfb8c69691E914275e19Eb9d42735844A120067aD to=0xfb8c69691E914275e19Eb9d42735844A120067aD
+INFO [04-06|20:13:15.537] Submitted transaction                    hash=0xc2f5aa3063d679fd39d9f2495577cb204519e9b8ecd68065155083f9c13a9aae from=0xfb8c69691E914275e19Eb9d42735844A120067aD nonce=7 recipient=0xfb8c69691E914275e19Eb9d42735844A120067aD value=0
+DEBUG[04-06|20:13:15.537] Served eth_sendTransaction               conn=[::1]:50696 reqid=20 duration=4.942708ms
+DEBUG[04-06|20:13:15.537] Reinjecting stale transactions           count=0
+TRACE[04-06|20:13:15.537] Removed old queued transactions          count=0
+TRACE[04-06|20:13:15.537] Removed unpayable queued transactions    count=0
+TRACE[04-06|20:13:15.537] Promoted queued transactions             count=0
+TRACE[04-06|20:13:15.538] Pooled new future transaction            hash=f7f8a3..7caa25 from=0xfb8c69691E914275e19Eb9d42735844A120067aD to=0xfb8c69691E914275e19Eb9d42735844A120067aD
+TRACE[04-06|20:13:15.539] Removed old queued transactions          count=0
+TRACE[04-06|20:13:15.539] Removed unpayable queued transactions    count=0
+TRACE[04-06|20:13:15.539] Promoted queued transactions             count=3
+INFO [04-06|20:13:15.539] Submitted transaction                    hash=0xf7f8a37a85beb5d366c989295cd46961a9e2bb59fac54b58fcb69fd93c7caa25 from=0xfb8c69691E914275e19Eb9d42735844A120067aD nonce=8 recipient=0xfb8c69691E914275e19Eb9d42735844A120067aD value=0
+DEBUG[04-06|20:13:15.539] Served eth_sendTransaction               conn=[::1]:50697 reqid=21 duration=3.876541ms
+DEBUG[04-06|20:13:15.540] Distributed transactions                 plaintxs=3 blobtxs=0 largetxs=0 bcastpeers=0 bcastcount=0 annpeers=0 anncount=0
+DEBUG[04-06|20:13:15.542] Served eth_getTransactionReceipt         conn=[::1]:50696 reqid=25 duration="135.625µs"
+DEBUG[04-06|20:13:15.542] Served eth_getTransactionReceipt         conn=[::1]:50691 reqid=23 duration="154.917µs"
+INFO [04-06|20:13:15.541] Starting work on payload                 id=0x02b343cad404c4b5
+DEBUG[04-06|20:13:15.544] Served eth_getTransactionReceipt         conn=[::1]:50695 reqid=24 duration=2.126041ms
+TRACE[04-06|20:13:15.544] Engine API request received              method=GetPayload        id=0x02b343cad404c4b5
+TRACE[04-06|20:13:15.544] Estimate gas usage automatically         gas=0x5208
+TRACE[04-06|20:13:15.545] Pooled new future transaction            hash=9b54d6..8b5e93 from=0xfb8c69691E914275e19Eb9d42735844A120067aD to=0xfb8c69691E914275e19Eb9d42735844A120067aD
+INFO [04-06|20:13:15.546] Submitted transaction                    hash=0x9b54d66bb30c77334f95e2931ca4ab6f11f61b139af1a6fc517b3fb4fe8b5e93 from=0xfb8c69691E914275e19Eb9d42735844A120067aD nonce=9 recipient=0xfb8c69691E914275e19Eb9d42735844A120067aD value=0
+DEBUG[04-06|20:13:15.546] Served eth_sendTransaction               conn=[::1]:50690 reqid=22 duration=3.769958ms
+DEBUG[04-06|20:13:15.547] Served eth_getTransactionReceipt         conn=[::1]:50695 reqid=26 duration="131.375µs"
+INFO [04-06|20:13:15.547] Updated payload                          id=0x02b343cad404c4b5 number=2           hash=c91026..4af5b9 txs=4 withdrawals=0 gas=84000   fees=8.4e-14  root=9b54af..08e71e elapsed=2.782ms
+INFO [04-06|20:13:15.547] Stopping work on payload                 id=0x02b343cad404c4b5 reason=delivery
+TRACE[04-06|20:13:15.547] Engine API request received              method=NewPayload        number=2           hash=c91026..4af5b9
+TRACE[04-06|20:13:15.548] Inserting block without sethead          hash=c91026..4af5b9 number=0x105aaf260
+DEBUG[04-06|20:13:15.549] Served eth_getTransactionReceipt         conn=[::1]:50695 reqid=27 duration="104.625µs"
+INFO [04-06|20:13:15.552] Imported new potential chain segment     number=2           hash=c91026..4af5b9 blocks=1 txs=4 mgas=0.084 elapsed=3.917ms     mgasps=21.443 snapdiffs=218.00B triedirty=2.92KiB
+TRACE[04-06|20:13:15.552] Engine API request received              method=ForkchoiceUpdated head=c91026..4af5b9 finalized=f0054e..040698 safe=c91026..4af5b9
+INFO [04-06|20:13:15.554] Chain head was updated                   number=2           hash=c91026..4af5b9 root=9b54af..08e71e elapsed="701.042µs"
+TRACE[04-06|20:13:15.554] Engine API request received              method=ForkchoiceUpdated head=c91026..4af5b9 finalized=f0054e..040698 safe=c91026..4af5b9
+DEBUG[04-06|20:13:15.554] Reinjecting stale transactions           count=0
+TRACE[04-06|20:13:15.554] Skipping transaction with low nonce      hash=edb2c6..7b122d sender=0xfb8c69691E914275e19Eb9d42735844A120067aD nonce=5
+TRACE[04-06|20:13:15.554] Removed old queued transactions          count=0
+TRACE[04-06|20:13:15.554] Removed unpayable queued transactions    count=0
+TRACE[04-06|20:13:15.555] Promoted queued transactions             count=1
+TRACE[04-06|20:13:15.555] Skipping transaction with low nonce      hash=cc3638..050f71 sender=0xfb8c69691E914275e19Eb9d42735844A120067aD nonce=6
+TRACE[04-06|20:13:15.555] Removed old pending transaction          hash=edb2c6..7b122d
+TRACE[04-06|20:13:15.555] Removed old pending transaction          hash=cc3638..050f71
+TRACE[04-06|20:13:15.555] Removed old pending transaction          hash=c2f5aa..3a9aae
+TRACE[04-06|20:13:15.555] Removed old pending transaction          hash=f7f8a3..7caa25
+TRACE[04-06|20:13:15.555] Skipping transaction with low nonce      hash=c2f5aa..3a9aae sender=0xfb8c69691E914275e19Eb9d42735844A120067aD nonce=7
+DEBUG[04-06|20:13:15.555] Distributed transactions                 plaintxs=1 blobtxs=0 largetxs=0 bcastpeers=0 bcastcount=0 annpeers=0 anncount=0
+TRACE[04-06|20:13:15.555] Skipping transaction with low nonce      hash=f7f8a3..7caa25 sender=0xfb8c69691E914275e19Eb9d42735844A120067aD nonce=8
+TRACE[04-06|20:13:15.555] Decrease miner recommit interval         from=2s to=2s
+DEBUG[04-06|20:13:15.647] Served eth_getTransactionReceipt         conn=[::1]:50695 reqid=28 duration=1.086333ms
+DEBUG[04-06|20:13:15.647] Served eth_getTransactionReceipt         conn=[::1]:50691 reqid=29 duration="989.5µs"
+DEBUG[04-06|20:13:15.651] Served eth_getTransactionReceipt         conn=[::1]:50698 reqid=30 duration=1.518208ms
+DEBUG[04-06|20:13:15.651] Served eth_getTransactionReceipt         conn=[::1]:50699 reqid=31 duration=1.343917ms
+TRACE[04-06|20:13:15.651] Estimate gas usage automatically         gas=0x5208
+TRACE[04-06|20:13:15.652] Estimate gas usage automatically         gas=0x5208
+TRACE[04-06|20:13:15.652] Pooled new future transaction            hash=034b49..36d825 from=0xfb8c69691E914275e19Eb9d42735844A120067aD to=0xfb8c69691E914275e19Eb9d42735844A120067aD
+INFO [04-06|20:13:15.652] Submitted transaction                    hash=0x034b4941ac6c1de3fd8e32b5c9d9976fb5896c6dbd6f37e9bb019db9e136d825 from=0xfb8c69691E914275e19Eb9d42735844A120067aD nonce=10 recipient=0xfb8c69691E914275e19Eb9d42735844A120067aD value=0
+DEBUG[04-06|20:13:15.652] Served eth_sendTransaction               conn=[::1]:50691 reqid=32 duration=1.678ms
+TRACE[04-06|20:13:15.653] Pooled new future transaction            hash=6bd249..5ead8f from=0xfb8c69691E914275e19Eb9d42735844A120067aD to=0xfb8c69691E914275e19Eb9d42735844A120067aD
+INFO [04-06|20:13:15.653] Submitted transaction                    hash=0x6bd2490d9e4539f37ef2493389cd1066a25b32b4b2f50076e2824437335ead8f from=0xfb8c69691E914275e19Eb9d42735844A120067aD nonce=11 recipient=0xfb8c69691E914275e19Eb9d42735844A120067aD value=0
+DEBUG[04-06|20:13:15.653] Served eth_sendTransaction               conn=[::1]:50695 reqid=33 duration=1.654708ms
+TRACE[04-06|20:13:15.653] Estimate gas usage automatically         gas=0x5208
+TRACE[04-06|20:13:15.653] Estimate gas usage automatically         gas=0x5208
+DEBUG[04-06|20:13:15.654] Served eth_getTransactionReceipt         conn=[::1]:50691 reqid=36 duration="66.083µs"
+TRACE[04-06|20:13:15.654] Pooled new future transaction            hash=24ca4e..db7964 from=0xfb8c69691E914275e19Eb9d42735844A120067aD to=0xfb8c69691E914275e19Eb9d42735844A120067aD
+INFO [04-06|20:13:15.654] Submitted transaction                    hash=0x24ca4ec05d745c4271e7b4a70d7a74d403daa38306ef7a6f6ae01a8394db7964 from=0xfb8c69691E914275e19Eb9d42735844A120067aD nonce=12 recipient=0xfb8c69691E914275e19Eb9d42735844A120067aD value=0
+DEBUG[04-06|20:13:15.654] Served eth_sendTransaction               conn=[::1]:50699 reqid=34 duration=1.53575ms
+TRACE[04-06|20:13:15.654] Pooled new future transaction            hash=2298fe..9309e9 from=0xfb8c69691E914275e19Eb9d42735844A120067aD to=0xfb8c69691E914275e19Eb9d42735844A120067aD
+INFO [04-06|20:13:15.654] Submitted transaction                    hash=0x2298fea2beeae800aa07c9e1751de1a4995d3fc506e0af3fc9039d77e89309e9 from=0xfb8c69691E914275e19Eb9d42735844A120067aD nonce=13 recipient=0xfb8c69691E914275e19Eb9d42735844A120067aD value=0
+DEBUG[04-06|20:13:15.654] Served eth_getTransactionReceipt         conn=[::1]:50700 reqid=37 duration="56.042µs"
+DEBUG[04-06|20:13:15.654] Served eth_sendTransaction               conn=[::1]:50698 reqid=35 duration=1.871958ms
+DEBUG[04-06|20:13:15.655] Served eth_getTransactionReceipt         conn=[::1]:50691 reqid=38 duration="61.583µs"
+DEBUG[04-06|20:13:15.655] Served eth_getTransactionReceipt         conn=[::1]:50701 reqid=39 duration="48.417µs"
+DEBUG[04-06|20:13:15.656] Served eth_getTransactionReceipt         conn=[::1]:50700 reqid=40 duration="52.875µs"
+DEBUG[04-06|20:13:15.755] Served eth_getTransactionReceipt         conn=[::1]:50691 reqid=41 duration="69.583µs"
+DEBUG[04-06|20:13:15.756] Served eth_getTransactionReceipt         conn=[::1]:50701 reqid=42 duration="57.25µs"
+DEBUG[04-06|20:13:15.756] Served eth_getTransactionReceipt         conn=[::1]:50691 reqid=43 duration="44.041µs"
+DEBUG[04-06|20:13:15.757] Served eth_getTransactionReceipt         conn=[::1]:50702 reqid=44 duration="60.125µs"
+DEBUG[04-06|20:13:15.758] Served eth_getTransactionReceipt         conn=[::1]:50691 reqid=45 duration="47.75µs"
+DEBUG[04-06|20:13:15.858] Served eth_getTransactionReceipt         conn=[::1]:50702 reqid=46 duration="71.166µs"
+DEBUG[04-06|20:13:15.858] Served eth_getTransactionReceipt         conn=[::1]:50701 reqid=47 duration="55.875µs"
+DEBUG[04-06|20:13:15.859] Served eth_getTransactionReceipt         conn=[::1]:50703 reqid=48 duration="54.334µs"
+DEBUG[04-06|20:13:15.859] Served eth_getTransactionReceipt         conn=[::1]:50702 reqid=49 duration="56.709µs"
+DEBUG[04-06|20:13:15.860] Served eth_getTransactionReceipt         conn=[::1]:50701 reqid=50 duration="52.5µs"
+DEBUG[04-06|20:13:15.960] Served eth_getTransactionReceipt         conn=[::1]:50702 reqid=51 duration="108.708µs"
+DEBUG[04-06|20:13:15.961] Served eth_getTransactionReceipt         conn=[::1]:50703 reqid=52 duration="58.208µs"
+DEBUG[04-06|20:13:15.962] Served eth_getTransactionReceipt         conn=[::1]:50702 reqid=53 duration="54.209µs"
+DEBUG[04-06|20:13:15.963] Served eth_getTransactionReceipt         conn=[::1]:50712 reqid=54 duration="49.708µs"
+DEBUG[04-06|20:13:15.963] Served eth_getTransactionReceipt         conn=[::1]:50713 reqid=55 duration="50.125µs"
+DEBUG[04-06|20:13:16.063] Served eth_getTransactionReceipt         conn=[::1]:50703 reqid=57 duration="82.083µs"
+DEBUG[04-06|20:13:16.063] Served eth_getTransactionReceipt         conn=[::1]:50712 reqid=56 duration="79.791µs"
+DEBUG[04-06|20:13:16.065] Served eth_getTransactionReceipt         conn=[::1]:50714 reqid=58 duration="55.916µs"
+DEBUG[04-06|20:13:16.065] Served eth_getTransactionReceipt         conn=[::1]:50715 reqid=59 duration="62.917µs"
+DEBUG[04-06|20:13:16.066] Served eth_getTransactionReceipt         conn=[::1]:50703 reqid=60 duration="149.458µs"
+DEBUG[04-06|20:13:16.167] Served eth_getTransactionReceipt         conn=[::1]:50716 reqid=63 duration="80.458µs"
+DEBUG[04-06|20:13:16.167] Served eth_getTransactionReceipt         conn=[::1]:50712 reqid=61 duration="92.458µs"
+DEBUG[04-06|20:13:16.168] Served eth_getTransactionReceipt         conn=[::1]:50717 reqid=62 duration="58.709µs"
+DEBUG[04-06|20:13:16.168] Served eth_getTransactionReceipt         conn=[::1]:50718 reqid=64 duration="55.625µs"
+DEBUG[04-06|20:13:16.169] Served eth_getTransactionReceipt         conn=[::1]:50716 reqid=65 duration="50.875µs"
+DEBUG[04-06|20:13:16.269] Served eth_getTransactionReceipt         conn=[::1]:50718 reqid=66 duration="86.417µs"
+DEBUG[04-06|20:13:16.269] Served eth_getTransactionReceipt         conn=[::1]:50712 reqid=67 duration="86.167µs"
+DEBUG[04-06|20:13:16.271] Served eth_getTransactionReceipt         conn=[::1]:50720 reqid=69 duration="57.375µs"
+DEBUG[04-06|20:13:16.271] Served eth_getTransactionReceipt         conn=[::1]:50719 reqid=68 duration="56.917µs"
+DEBUG[04-06|20:13:16.272] Served eth_getTransactionReceipt         conn=[::1]:50718 reqid=70 duration="61.25µs"
+DEBUG[04-06|20:13:16.373] Served eth_getTransactionReceipt         conn=[::1]:50718 reqid=72 duration="70µs"
+DEBUG[04-06|20:13:16.373] Served eth_getTransactionReceipt         conn=[::1]:50712 reqid=71 duration="69.625µs"
+DEBUG[04-06|20:13:16.375] Served eth_getTransactionReceipt         conn=[::1]:50721 reqid=73 duration="58.584µs"
+DEBUG[04-06|20:13:16.375] Served eth_getTransactionReceipt         conn=[::1]:50723 reqid=74 duration="54.375µs"
+DEBUG[04-06|20:13:16.375] Served eth_getTransactionReceipt         conn=[::1]:50722 reqid=75 duration="58.333µs"
+DEBUG[04-06|20:13:16.477] Served eth_getTransactionReceipt         conn=[::1]:50712 reqid=76 duration="93.25µs"
+DEBUG[04-06|20:13:16.477] Served eth_getTransactionReceipt         conn=[::1]:50718 reqid=77 duration="103µs"
+DEBUG[04-06|20:13:16.478] Served eth_getTransactionReceipt         conn=[::1]:50725 reqid=78 duration="60.375µs"
+DEBUG[04-06|20:13:16.479] Served eth_getTransactionReceipt         conn=[::1]:50724 reqid=80 duration="50.416µs"
+DEBUG[04-06|20:13:16.479] Served eth_getTransactionReceipt         conn=[::1]:50726 reqid=79 duration="311.083µs"
+DEBUG[04-06|20:13:16.581] Served eth_getTransactionReceipt         conn=[::1]:50718 reqid=82 duration="92.625µs"
+DEBUG[04-06|20:13:16.581] Served eth_getTransactionReceipt         conn=[::1]:50712 reqid=81 duration="83.208µs"
+DEBUG[04-06|20:13:16.582] Served eth_getTransactionReceipt         conn=[::1]:50728 reqid=84 duration="79.791µs"
+DEBUG[04-06|20:13:16.582] Served eth_getTransactionReceipt         conn=[::1]:50729 reqid=85 duration="65.041µs"
+TRACE[04-06|20:13:16.583] Estimate gas usage automatically         gas=0x5208
+TRACE[04-06|20:13:16.584] Pooled new future transaction            hash=2120f1..abad43 from=0xfb8c69691E914275e19Eb9d42735844A120067aD to=0xfb8c69691E914275e19Eb9d42735844A120067aD
+INFO [04-06|20:13:16.584] Submitted transaction                    hash=0x2120f1d967a28ba0c467fd6c638db89959d64a92872569e7e0869ba0f3abad43 from=0xfb8c69691E914275e19Eb9d42735844A120067aD nonce=14 recipient=0xfb8c69691E914275e19Eb9d42735844A120067aD value=0
+DEBUG[04-06|20:13:16.584] Served eth_sendTransaction               conn=[::1]:50727 reqid=83 duration=1.814792ms
+DEBUG[04-06|20:13:16.586] Served eth_getTransactionReceipt         conn=[::1]:50718 reqid=86 duration="62.75µs"
+TRACE[04-06|20:13:16.685] Estimate gas usage automatically         gas=0x5208
+TRACE[04-06|20:13:16.686] Pooled new future transaction            hash=b0e016..0163e6 from=0xfb8c69691E914275e19Eb9d42735844A120067aD to=0xfb8c69691E914275e19Eb9d42735844A120067aD
+INFO [04-06|20:13:16.686] Submitted transaction                    hash=0xb0e0165e29eb44545cd852da79937ad50c5933bead69cf54fbc122b5b50163e6 from=0xfb8c69691E914275e19Eb9d42735844A120067aD nonce=15 recipient=0xfb8c69691E914275e19Eb9d42735844A120067aD value=0
+DEBUG[04-06|20:13:16.686] Served eth_sendTransaction               conn=[::1]:50718 reqid=87 duration=1.819958ms
+DEBUG[04-06|20:13:16.688] Served eth_getTransactionReceipt         conn=[::1]:50712 reqid=88 duration="71.125µs"
+DEBUG[04-06|20:13:16.688] Served eth_getTransactionReceipt         conn=[::1]:50718 reqid=89 duration="71.167µs"
+DEBUG[04-06|20:13:16.790] Served eth_getTransactionReceipt         conn=[::1]:50718 reqid=90 duration="76.166µs"
+DEBUG[04-06|20:13:16.791] Served eth_getTransactionReceipt         conn=[::1]:50712 reqid=91 duration="60.833µs"
+DEBUG[04-06|20:13:16.892] Served eth_getTransactionReceipt         conn=[::1]:50712 reqid=93 duration="67.917µs"
+DEBUG[04-06|20:13:16.892] Served eth_getTransactionReceipt         conn=[::1]:50718 reqid=92 duration="113.75µs"
+DEBUG[04-06|20:13:16.995] Served eth_getTransactionReceipt         conn=[::1]:50712 reqid=95 duration="63.209µs"
+DEBUG[04-06|20:13:16.995] Served eth_getTransactionReceipt         conn=[::1]:50718 reqid=94 duration="63.75µs"
+DEBUG[04-06|20:13:17.097] Served eth_getTransactionReceipt         conn=[::1]:50718 reqid=97 duration="91.875µs"
+DEBUG[04-06|20:13:17.097] Served eth_getTransactionReceipt         conn=[::1]:50712 reqid=96 duration="98.625µs"
+DEBUG[04-06|20:13:17.200] Served eth_getTransactionReceipt         conn=[::1]:50712 reqid=98 duration="86.375µs"
+DEBUG[04-06|20:13:17.200] Served eth_getTransactionReceipt         conn=[::1]:50718 reqid=99 duration="83.458µs"
+DEBUG[04-06|20:13:17.304] Served eth_getTransactionReceipt         conn=[::1]:50718 reqid=101 duration="84.334µs"
+DEBUG[04-06|20:13:17.304] Served eth_getTransactionReceipt         conn=[::1]:50712 reqid=100 duration="92.375µs"
+DEBUG[04-06|20:13:17.407] Served eth_getTransactionReceipt         conn=[::1]:50712 reqid=103 duration="81µs"
+DEBUG[04-06|20:13:17.407] Served eth_getTransactionReceipt         conn=[::1]:50718 reqid=102 duration="83µs"
+DEBUG[04-06|20:13:17.509] Served eth_getTransactionReceipt         conn=[::1]:50712 reqid=104 duration="76.042µs"
+DEBUG[04-06|20:13:17.509] Served eth_getTransactionReceipt         conn=[::1]:50718 reqid=105 duration="71.625µs"
+DEBUG[04-06|20:13:17.612] Served eth_getTransactionReceipt         conn=[::1]:50718 reqid=106 duration="95.416µs"
+DEBUG[04-06|20:13:23.138] Transaction pool status report           executable=1 queued=6 stales=0
